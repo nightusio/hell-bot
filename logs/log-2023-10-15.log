@@ -4274,3 +4274,157 @@ Caused by: java.net.UnknownHostException: gateway.discord.gg
 [13:17:26.290] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
 [13:17:26.291] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
 [13:17:26.781] [main] [INFO] Loading complete! Done in 3s 761ms...
+[13:19:21.119] [dream-shutdown] [INFO] Disabling HellHard...
+[13:19:21.119] [dream-shutdown] [INFO] Disconnecting from HellHard (1163067564478439525)
+[13:19:21.313] [ReadingThread] [INFO] Websocket closed with reason 'unknown' and code NORMAL (1000) by client!
+[13:19:21.318] [dream-shutdown] [INFO] Active version: v1.0 - Author: Nightusio
+[13:19:41.237] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[13:19:41.238] [main] [INFO] Loading HellHard resources...
+[13:19:41.315] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [66 ms]
+[13:19:43.467] [main] [INFO] Logged in as HellHard (1163067564478439525)
+[13:19:43.494] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [23 ms]
+[13:19:43.504] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [9 ms]
+[13:19:43.504] [main] [INFO] Added injectable object: StorageConfig
+[13:19:43.533] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'hellhard', type = 'FLAT' } [23 ms]
+[13:19:43.538] [main] [INFO] Added repository component: MemberRepository [5 ms]
+[13:19:43.546] [main] [INFO] Added configuration component: TicketConfig { path = 'ticket.yml', subconfigs = '' } [7 ms]
+[13:19:43.550] [main] [INFO] Added object component: TicketManager [2 ms]
+[13:19:43.555] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [5 ms]
+[13:19:43.558] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [1 ms]
+[13:19:43.558] [main] [INFO] Added object component: TicketHandler [0 ms]
+[13:19:43.559] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [0 ms]
+[13:19:43.560] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [1 ms]
+[13:19:43.563] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [3 ms]
+[13:19:43.564] [main] [INFO] Added listener (event) component: TicketButtonListener { type = 'ButtonClickListener' } [1 ms]
+[13:19:43.565] [main] [INFO] Added listener (event) component: TicketMenuListener { type = 'SelectMenuChooseListener' } [0 ms]
+[13:19:43.567] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
+[13:19:43.568] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
+[13:19:43.874] [main] [INFO] Loading complete! Done in 2s 827ms...
+[13:21:16.872] [ReadingThread] [WARN] Websocket error!
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
+	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
+	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
+	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
+Caused by: java.net.SocketException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1465)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1069)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.neovisionaries.ws.client.WebSocketInputStream.readBytes(WebSocketInputStream.java:165)
+	at com.neovisionaries.ws.client.WebSocketInputStream.readFrame(WebSocketInputStream.java:46)
+	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:338)
+	... 3 common frames omitted
+[13:21:16.883] [WritingThread] [WARN] Websocket error!
+com.neovisionaries.ws.client.WebSocketException: Flushing frames to the server failed: Connection or outbound has closed
+	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:434)
+	at com.neovisionaries.ws.client.WritingThread.sendFrames(WritingThread.java:384)
+	at com.neovisionaries.ws.client.WritingThread.main(WritingThread.java:108)
+	at com.neovisionaries.ws.client.WritingThread.runMain(WritingThread.java:55)
+	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
+Caused by: java.net.SocketException: Connection or outbound has closed
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1301)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:143)
+	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
+	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
+	... 4 common frames omitted
+[13:21:16.893] [WritingThread] [WARN] Websocket error!
+com.neovisionaries.ws.client.WebSocketException: Flushing frames to the server failed: Connection or outbound has closed
+	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:434)
+	at com.neovisionaries.ws.client.WritingThread.sendFrames(WritingThread.java:384)
+	at com.neovisionaries.ws.client.WritingThread.main(WritingThread.java:120)
+	at com.neovisionaries.ws.client.WritingThread.runMain(WritingThread.java:55)
+	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
+Caused by: java.net.SocketException: Connection or outbound has closed
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1301)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:143)
+	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
+	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
+	... 4 common frames omitted
+[13:21:16.903] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście' and code VIOLATED (1008) by client!
+[13:21:16.907] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
+[13:21:17.924] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
+com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-d.discord.gg:443: Nieznany host (gateway-us-east1-d.discord.gg)
+	at com.neovisionaries.ws.client.SocketConnector.resolveHostname(SocketConnector.java:180)
+	at com.neovisionaries.ws.client.SocketConnector.connectSocket(SocketConnector.java:108)
+	at com.neovisionaries.ws.client.SocketConnector.doConnect(SocketConnector.java:238)
+	at com.neovisionaries.ws.client.SocketConnector.connect(SocketConnector.java:189)
+	at com.neovisionaries.ws.client.WebSocket.connect(WebSocket.java:2351)
+	at org.javacord.core.util.gateway.DiscordWebSocketAdapter.connect(DiscordWebSocketAdapter.java:466)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+Caused by: java.net.UnknownHostException: Nieznany host (gateway-us-east1-d.discord.gg)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:940)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1547)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:858)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1537)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1390)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1311)
+	at com.neovisionaries.ws.client.SocketConnector.resolveHostname(SocketConnector.java:139)
+	... 11 common frames omitted
+[13:21:17.926] [Javacord - Central Scheduler - 1] [INFO] Trying to reconnect/resume in 2 seconds!
+[13:21:30.478] [dream-shutdown] [INFO] Disabling HellHard...
+[13:21:30.479] [dream-shutdown] [INFO] Disconnecting from HellHard (1163067564478439525)
+[13:21:30.664] [ReadingThread] [INFO] Websocket closed with reason 'unknown' and code NORMAL (1000) by client!
+[13:21:30.669] [dream-shutdown] [INFO] Active version: v1.0 - Author: Nightusio
+[13:21:45.317] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[13:21:45.318] [main] [INFO] Loading HellHard resources...
+[13:21:45.404] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [74 ms]
+[13:21:48.164] [main] [INFO] Logged in as HellHard (1163067564478439525)
+[13:21:48.198] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [29 ms]
+[13:21:48.214] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [14 ms]
+[13:21:48.214] [main] [INFO] Added injectable object: StorageConfig
+[13:21:48.262] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'hellhard', type = 'FLAT' } [39 ms]
+[13:21:48.272] [main] [INFO] Added repository component: MemberRepository [8 ms]
+[13:21:48.283] [main] [INFO] Added configuration component: TicketConfig { path = 'ticket.yml', subconfigs = '' } [10 ms]
+[13:21:48.290] [main] [INFO] Added object component: TicketManager [3 ms]
+[13:21:48.298] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [7 ms]
+[13:21:48.302] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [2 ms]
+[13:21:48.303] [main] [INFO] Added object component: TicketHandler [0 ms]
+[13:21:48.304] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [0 ms]
+[13:21:48.306] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[13:21:48.310] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [3 ms]
+[13:21:48.312] [main] [INFO] Added listener (event) component: TicketButtonListener { type = 'ButtonClickListener' } [1 ms]
+[13:21:48.313] [main] [INFO] Added listener (event) component: TicketMenuListener { type = 'SelectMenuChooseListener' } [0 ms]
+[13:21:48.315] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [0 ms]
+[13:21:48.317] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[13:21:48.704] [main] [INFO] Loading complete! Done in 3s 572ms...
+[13:34:28.543] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[13:34:28.544] [main] [INFO] Loading HellHard resources...
+[13:34:28.630] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [70 ms]
+[13:34:31.077] [main] [INFO] Logged in as HellHard (1163067564478439525)
+[13:34:31.096] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [14 ms]
+[13:34:31.104] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [7 ms]
+[13:34:31.104] [main] [INFO] Added injectable object: StorageConfig
+[13:34:31.135] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'hellhard', type = 'FLAT' } [25 ms]
+[13:34:31.141] [main] [INFO] Added repository component: MemberRepository [6 ms]
+[13:34:31.151] [main] [INFO] Added configuration component: TicketConfig { path = 'ticket.yml', subconfigs = '' } [8 ms]
+[13:34:31.155] [main] [INFO] Added object component: TicketManager [3 ms]
+[13:34:31.164] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [7 ms]
+[13:34:31.166] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [2 ms]
+[13:34:31.167] [main] [INFO] Added object component: TicketHandler [0 ms]
+[13:34:31.168] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [0 ms]
+[13:34:31.169] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[13:34:31.172] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [2 ms]
+[13:34:31.174] [main] [INFO] Added listener (event) component: TicketButtonListener { type = 'ButtonClickListener' } [2 ms]
+[13:34:31.175] [main] [INFO] Added listener (event) component: TicketMenuListener { type = 'SelectMenuChooseListener' } [1 ms]
+[13:34:31.176] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [0 ms]
+[13:34:31.177] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
+[13:34:31.682] [main] [INFO] Loading complete! Done in 3s 349ms...
