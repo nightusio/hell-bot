@@ -112,7 +112,7 @@
 [11:57:17.570] [main] [INFO] Loading complete! Done in 4s 564ms...
 [11:57:21.288] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -123,7 +123,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:21.654] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -134,7 +134,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:22.016] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -145,7 +145,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:22.350] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -156,7 +156,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:22.845] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -167,7 +167,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:23.245] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -178,7 +178,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:23.587] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -189,7 +189,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:28.609] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -200,7 +200,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:28.958] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -211,7 +211,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:29.401] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -222,7 +222,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:29.690] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -233,7 +233,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:30.021] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -244,7 +244,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:30.520] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -255,7 +255,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:30.823] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -266,7 +266,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:31.850] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -277,7 +277,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:37.498] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -288,7 +288,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:37.992] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -299,7 +299,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:38.313] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -310,7 +310,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:38.636] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -321,7 +321,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:39.146] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -332,7 +332,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:39.546] [Javacord - Central ExecutorService - 1] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -343,7 +343,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [11:57:44.508] [Javacord - Central ExecutorService - 1] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -371,7 +371,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 [12:52:50.978] [main] [INFO] Loading complete! Done in 4s 716ms...
 [12:52:54.698] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -383,7 +383,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 [12:52:54.702] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.util.NoSuchElementException: No value present
 	at java.base/java.util.Optional.get(Optional.java:143)
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:39)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:39)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -394,7 +394,7 @@ java.util.NoSuchElementException: No value present
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:52:54.942] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -405,7 +405,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:52:55.340] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -416,7 +416,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:52:55.763] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -427,7 +427,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:52:56.160] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -438,7 +438,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:52:56.603] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -449,7 +449,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:52:56.985] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -460,7 +460,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:52:58.012] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -471,7 +471,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:53:03.635] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -482,7 +482,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:53:03.892] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:38)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -510,7 +510,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 [12:55:28.164] [main] [INFO] Loading complete! Done in 4s 337ms...
 [12:55:29.679] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:41)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:41)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -538,7 +538,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 [12:55:55.295] [main] [INFO] Loading complete! Done in 4s 553ms...
 [12:56:01.202] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:41)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:41)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -549,7 +549,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [12:56:06.333] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:41)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:41)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -577,7 +577,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 [13:02:10.243] [main] [INFO] Loading complete! Done in 3s 191ms...
 [13:02:14.414] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:47)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:47)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -608,7 +608,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 [13:07:29.608] [Javacord - Central ExecutorService - 4] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.util.NoSuchElementException: No value present
 	at java.base/java.util.Optional.get(Optional.java:143)
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:39)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:39)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -620,7 +620,7 @@ java.util.NoSuchElementException: No value present
 [13:07:36.399] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.util.NoSuchElementException: No value present
 	at java.base/java.util.Optional.get(Optional.java:143)
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:39)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:39)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -632,7 +632,7 @@ java.util.NoSuchElementException: No value present
 [13:07:47.827] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.util.NoSuchElementException: No value present
 	at java.base/java.util.Optional.get(Optional.java:143)
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:39)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:39)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -643,7 +643,7 @@ java.util.NoSuchElementException: No value present
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [13:07:51.619] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:54)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:54)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -654,7 +654,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [13:09:00.340] [Javacord - Central ExecutorService - 5] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:54)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:54)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -682,7 +682,7 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 [13:09:09.798] [main] [INFO] Loading complete! Done in 3s 259ms...
 [13:09:12.741] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Message
-	at me.night.stormcity.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:55)
+	at me.night.hellhard.listener.MessageSentListener.onMessageCreate(MessageSentListener.java:55)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchMessageCreateEvent$272(EventDispatcher.java:9168)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -761,8 +761,8 @@ java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatibl
 [18:03:21.434] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
 [18:03:21.863] [main] [INFO] Loading complete! Done in 3s 798ms...
 [18:04:27.987] [Javacord - Central ExecutorService - 1] [ERROR] Unhandled exception in a listener thread for Storm City!
-java.lang.NullPointerException: Cannot read field "welcomeChannelId" because "me.night.stormcity.listener.JoinListener.botConfig" is null
-	at me.night.stormcity.listener.JoinListener.onServerMemberJoin(JoinListener.java:28)
+java.lang.NullPointerException: Cannot read field "welcomeChannelId" because "me.night.hellhard.listener.JoinListener.botConfig" is null
+	at me.night.hellhard.listener.JoinListener.onServerMemberJoin(JoinListener.java:28)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchServerMemberJoinEvent$96(EventDispatcher.java:3449)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)

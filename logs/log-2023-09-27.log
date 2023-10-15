@@ -101,16 +101,16 @@
 [23:44:44.644] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [67 ms]
 [23:44:46.417] [main] [INFO] Logged in as StormCity (1155940171020247121)
 [23:44:46.440] [main] [ERROR] An error was caught when plugin are starting...
-eu.okaeri.configs.exception.OkaeriException: failed to initialize me.night.stormcity.config.MessageConfig [class eu.okaeri.configs.yaml.snakeyaml.YamlSnakeYamlConfigurer]
+eu.okaeri.configs.exception.OkaeriException: failed to initialize me.night.hellhard.config.MessageConfig [class eu.okaeri.configs.yaml.snakeyaml.YamlSnakeYamlConfigurer]
 	at eu.okaeri.configs.ConfigManager.create(ConfigManager.java:41)
 	at cc.dreamcode.platform.javacord.component.ConfigurationComponentResolver.resolve(ConfigurationComponentResolver.java:73)
 	at cc.dreamcode.platform.component.ComponentClassResolver.process(ComponentClassResolver.java:21)
 	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:60)
 	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:72)
-	at me.night.stormcity.StormBot.enable(StormBot.java:62)
+	at me.night.hellhard.HellBot.enable(StormBot.java:62)
 	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.initialize(DreamJavacordPlatform.java:67)
 	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.run(DreamJavacordPlatform.java:158)
-	at me.night.stormcity.StormBot.main(StormBot.java:36)
+	at me.night.hellhard.HellBot.main(StormBot.java:36)
 Caused by: eu.okaeri.configs.exception.OkaeriException: failed to #setValue for verify-embed
 	at eu.okaeri.configs.OkaeriConfig.save(OkaeriConfig.java:355)
 	at eu.okaeri.configs.OkaeriConfig.save(OkaeriConfig.java:306)
@@ -130,16 +130,16 @@ Caused by: eu.okaeri.configs.exception.OkaeriException: cannot simplify type cla
 [23:45:10.233] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [63 ms]
 [23:45:11.895] [main] [INFO] Logged in as StormCity (1155940171020247121)
 [23:45:11.912] [main] [ERROR] An error was caught when plugin are starting...
-eu.okaeri.configs.exception.OkaeriException: failed to initialize me.night.stormcity.config.MessageConfig [class eu.okaeri.configs.yaml.snakeyaml.YamlSnakeYamlConfigurer]
+eu.okaeri.configs.exception.OkaeriException: failed to initialize me.night.hellhard.config.MessageConfig [class eu.okaeri.configs.yaml.snakeyaml.YamlSnakeYamlConfigurer]
 	at eu.okaeri.configs.ConfigManager.create(ConfigManager.java:41)
 	at cc.dreamcode.platform.javacord.component.ConfigurationComponentResolver.resolve(ConfigurationComponentResolver.java:73)
 	at cc.dreamcode.platform.component.ComponentClassResolver.process(ComponentClassResolver.java:21)
 	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:60)
 	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:72)
-	at me.night.stormcity.StormBot.enable(StormBot.java:62)
+	at me.night.hellhard.HellBot.enable(StormBot.java:62)
 	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.initialize(DreamJavacordPlatform.java:67)
 	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.run(DreamJavacordPlatform.java:158)
-	at me.night.stormcity.StormBot.main(StormBot.java:36)
+	at me.night.hellhard.HellBot.main(StormBot.java:36)
 Caused by: eu.okaeri.configs.exception.OkaeriException: failed to #setValue for verify-embed
 	at eu.okaeri.configs.OkaeriConfig.save(OkaeriConfig.java:355)
 	at eu.okaeri.configs.OkaeriConfig.save(OkaeriConfig.java:306)
@@ -214,7 +214,7 @@ Caused by: eu.okaeri.configs.exception.OkaeriException: cannot simplify type cla
 [23:48:57.937] [main] [INFO] Loading complete! Done in 2s 658ms...
 [23:49:14.193] [Javacord - Central ExecutorService - 2] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.ClassCastException: cc.dreamcode.platform.javacord.notice.Notice incompatible with org.javacord.api.entity.message.component.HighLevelComponent
-	at me.night.stormcity.command.admin.VerifyCommand.lambda$respond$0(VerifyCommand.java:66)
+	at me.night.hellhard.command.admin.VerifyCommand.lambda$respond$0(VerifyCommand.java:66)
 	at cc.dreamcode.platform.javacord.component.CommandComponentResolver.lambda$resolve$0(CommandComponentResolver.java:50)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchSlashCommandCreateEvent$4(EventDispatcher.java:479)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)

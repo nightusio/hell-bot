@@ -6,7 +6,7 @@ plugins {
 }
 
 allprojects {
-    group 'me.night.stormcity'
+    group 'me.night.hellhard'
     version '1.0-InDEV'
 
     apply plugin: 'java-library'

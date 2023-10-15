@@ -38,9 +38,9 @@ dependencies {
 }
 
 shadowJar {
-    archiveFileName = "Dream-Bot.jar"
+    archiveFileName = "Hell-Bot.jar"
 
     manifest {
-        attributes 'Main-Class': 'cc.dreamcode.template.TemplateBot'
+        attributes 'Main-Class': 'me.night.hellhard.HellBot'
     }
 }

@@ -24,12 +24,12 @@
 [01:41:11.323] [Javacord - Central ExecutorService - 4] [INFO] Ticket deleted: 1162897886292492399
 [01:43:23.921] [Javacord - Central ExecutorService - 3] [INFO] New ticket created!
 [01:45:46.890] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -77,7 +77,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[01:45:46.906] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[01:45:46.906] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [01:45:46.907] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [01:45:47.919] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-c.discord.gg:443: Nieznany host (gateway-us-east1-c.discord.gg)
@@ -603,12 +603,12 @@ Caused by: java.net.UnknownHostException: discord.com
 [01:47:05.478] [Javacord - Central ExecutorService - 3] [INFO] Ticket deleted: 1162898481883643985
 [01:47:41.488] [Javacord - Central ExecutorService - 2] [INFO] New ticket created!
 [01:54:47.474] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -656,15 +656,15 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[01:54:47.494] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[01:54:47.494] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [01:54:47.497] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [02:03:52.644] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -712,7 +712,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[02:03:52.656] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[02:03:52.656] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [02:03:52.658] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [02:03:53.672] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-b.discord.gg:443: Nieznany host (gateway-us-east1-b.discord.gg)
@@ -739,12 +739,12 @@ Caused by: java.net.UnknownHostException: Nieznany host (gateway-us-east1-b.disc
 	... 11 common frames omitted
 [02:03:53.672] [Javacord - Central Scheduler - 1] [INFO] Trying to reconnect/resume in 2 seconds!
 [02:21:50.537] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -792,7 +792,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[02:21:50.540] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[02:21:50.540] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [02:21:50.540] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [02:21:51.555] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway.discord.gg:443: Nieznany host (gateway.discord.gg)
@@ -959,12 +959,12 @@ Caused by: java.net.UnknownHostException: discord.com
 [02:46:07.151] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
 [02:46:07.152] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
 [02:46:19.032] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -1015,7 +1015,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[02:46:19.063] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[02:46:19.063] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [02:46:19.066] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [02:46:20.075] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-b.discord.gg:443: Nieznany host (gateway-us-east1-b.discord.gg)
@@ -1316,12 +1316,12 @@ Caused by: java.net.NoRouteToHostException: No route to host: no further informa
 [02:57:41.841] [main] [INFO] Loading StormCity resources...
 [02:57:41.921] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [67 ms]
 [02:57:53.649] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -1372,7 +1372,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[02:57:53.661] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[02:57:53.661] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [02:58:03.564] [main] [INFO] Active version: v1.0 - Author: Nightusio
 [02:58:03.566] [main] [INFO] Loading StormCity resources...
 [02:58:03.663] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [82 ms]
@@ -1915,7 +1915,7 @@ Caused by: java.net.UnknownHostException: Nieznany host (discord.com)
 [02:59:21.465] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
 [02:59:21.467] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [1 ms]
 [02:59:21.469] [main] [ERROR] An error was caught when plugin are starting...
-eu.okaeri.injector.exception.InjectorException: Cannot fill parameters, no injectable of type class me.night.stormcity.ticket.impl.TicketHandler [] found
+eu.okaeri.injector.exception.InjectorException: Cannot fill parameters, no injectable of type class me.night.hellhard.ticket.impl.TicketHandler [] found
 	at eu.okaeri.injector.OkaeriInjector.fillParameters(OkaeriInjector.java:246)
 	at eu.okaeri.injector.OkaeriInjector.invoke(OkaeriInjector.java:210)
 	at eu.okaeri.injector.OkaeriInjector.createInstance(OkaeriInjector.java:133)
@@ -1923,10 +1923,10 @@ eu.okaeri.injector.exception.InjectorException: Cannot fill parameters, no injec
 	at cc.dreamcode.platform.component.ComponentClassResolver.process(ComponentClassResolver.java:21)
 	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:60)
 	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:72)
-	at me.night.stormcity.StormBot.enable(StormBot.java:93)
+	at me.night.hellhard.HellBot.enable(StormBot.java:93)
 	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.initialize(DreamJavacordPlatform.java:67)
 	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.run(DreamJavacordPlatform.java:158)
-	at me.night.stormcity.StormBot.main(StormBot.java:43)
+	at me.night.hellhard.HellBot.main(StormBot.java:43)
 [02:59:47.870] [main] [INFO] Active version: v1.0 - Author: Nightusio
 [02:59:47.871] [main] [INFO] Loading StormCity resources...
 [02:59:47.951] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [69 ms]
@@ -2073,8 +2073,8 @@ eu.okaeri.injector.exception.InjectorException: Cannot fill parameters, no injec
 [03:09:20.612] [main] [INFO] Loading complete! Done in 3s 161ms...
 [03:09:26.834] [Javacord - Central ExecutorService - 1] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "this.ticketConfig.tickets" is null
-	at me.night.stormcity.ticket.TicketManager.getUserTicketByTicketType(TicketManager.java:80)
-	at me.night.stormcity.listener.ticket.TicketMenuListener.onSelectMenuChoose(TicketMenuListener.java:48)
+	at me.night.hellhard.ticket.TicketManager.getUserTicketByTicketType(TicketManager.java:80)
+	at me.night.hellhard.listener.ticket.TicketMenuListener.onSelectMenuChoose(TicketMenuListener.java:48)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchSelectMenuChooseEvent$22(EventDispatcher.java:1178)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -2085,8 +2085,8 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because 
 	at java.base/java.lang.Thread.run(Thread.java:857)
 [03:09:31.716] [Javacord - Central ExecutorService - 1] [ERROR] Unhandled exception in a listener thread for Storm City!
 java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "this.ticketConfig.tickets" is null
-	at me.night.stormcity.ticket.TicketManager.getUserTicketByTicketType(TicketManager.java:80)
-	at me.night.stormcity.listener.ticket.TicketMenuListener.onSelectMenuChoose(TicketMenuListener.java:48)
+	at me.night.hellhard.ticket.TicketManager.getUserTicketByTicketType(TicketManager.java:80)
+	at me.night.hellhard.listener.ticket.TicketMenuListener.onSelectMenuChoose(TicketMenuListener.java:48)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchSelectMenuChooseEvent$22(EventDispatcher.java:1178)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -2197,9 +2197,9 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because 
 [03:21:31.765] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
 [03:21:32.246] [main] [INFO] Loading complete! Done in 3s 212ms...
 [03:21:44.038] [Javacord - Central ExecutorService - 1] [ERROR] Unhandled exception in a listener thread for Storm City!
-java.lang.NullPointerException: Cannot invoke "me.night.stormcity.ticket.Ticket.getChannelID()" because "ticket" is null
-	at me.night.stormcity.ticket.impl.TicketHandler.deleteTicket(TicketHandler.java:109)
-	at me.night.stormcity.listener.ticket.TicketButtonListener.onButtonClick(TicketButtonListener.java:45)
+java.lang.NullPointerException: Cannot invoke "me.night.hellhard.ticket.Ticket.getChannelID()" because "ticket" is null
+	at me.night.hellhard.ticket.impl.TicketHandler.deleteTicket(TicketHandler.java:109)
+	at me.night.hellhard.listener.ticket.TicketButtonListener.onButtonClick(TicketButtonListener.java:45)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchButtonClickEvent$25(EventDispatcher.java:1301)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -2232,9 +2232,9 @@ java.lang.NullPointerException: Cannot invoke "me.night.stormcity.ticket.Ticket.
 [03:22:51.817] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
 [03:22:51.818] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
 [03:22:51.901] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
-java.lang.NullPointerException: Cannot invoke "me.night.stormcity.ticket.Ticket.getChannelID()" because "ticket" is null
-	at me.night.stormcity.ticket.impl.TicketHandler.deleteTicket(TicketHandler.java:109)
-	at me.night.stormcity.listener.ticket.TicketButtonListener.onButtonClick(TicketButtonListener.java:45)
+java.lang.NullPointerException: Cannot invoke "me.night.hellhard.ticket.Ticket.getChannelID()" because "ticket" is null
+	at me.night.hellhard.ticket.impl.TicketHandler.deleteTicket(TicketHandler.java:109)
+	at me.night.hellhard.listener.ticket.TicketButtonListener.onButtonClick(TicketButtonListener.java:45)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchButtonClickEvent$25(EventDispatcher.java:1301)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -2294,8 +2294,8 @@ java.lang.NullPointerException: Cannot invoke "me.night.stormcity.ticket.Ticket.
 [03:23:52.804] [main] [INFO] Loading complete! Done in 2s 905ms...
 [03:24:27.153] [Javacord - Central ExecutorService - 1] [INFO] New ticket created!
 [03:24:36.725] [Javacord - Central ExecutorService - 3] [ERROR] Unhandled exception in a listener thread for Storm City!
-java.lang.NullPointerException: Cannot invoke "me.night.stormcity.ticket.Ticket.getChannelID()" because "ticket" is null
-	at me.night.stormcity.listener.ticket.TicketButtonListener.onButtonClick(TicketButtonListener.java:41)
+java.lang.NullPointerException: Cannot invoke "me.night.hellhard.ticket.Ticket.getChannelID()" because "ticket" is null
+	at me.night.hellhard.listener.ticket.TicketButtonListener.onButtonClick(TicketButtonListener.java:41)
 	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchButtonClickEvent$25(EventDispatcher.java:1301)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
 	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
@@ -2355,12 +2355,12 @@ java.lang.NullPointerException: Cannot invoke "me.night.stormcity.ticket.Ticket.
 [03:27:06.597] [Javacord - Central ExecutorService - 1] [INFO] New ticket created!
 [03:27:14.464] [Javacord - Central ExecutorService - 1] [INFO] Ticket deleted: 1162924581225504939
 [03:33:56.585] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -2408,7 +2408,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[03:33:56.599] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[03:33:56.599] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [03:33:56.602] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [03:33:57.607] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-b.discord.gg:443: Nieznany host (gateway-us-east1-b.discord.gg)
@@ -2595,12 +2595,12 @@ Caused by: java.net.UnknownHostException: discord.com
 [03:36:31.431] [Javacord - Handlers Processor] [WARN] Unable to find thread with id 1075117165172244561
 [03:42:49.968] [Javacord - Central ExecutorService - 2] [INFO] New ticket created!
 [03:44:23.475] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -2648,7 +2648,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[03:44:23.493] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[03:44:23.493] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [03:44:23.496] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [03:44:24.508] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-b.discord.gg:443: Nieznany host (gateway-us-east1-b.discord.gg)
@@ -2769,12 +2769,12 @@ Caused by: java.net.UnknownHostException: discord.com
 	... 3 common frames omitted
 [03:44:30.531] [Javacord - Central Scheduler - 1] [INFO] Trying to reconnect/resume in 6 seconds!
 [03:48:35.228] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -2822,7 +2822,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[03:48:35.231] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[03:48:35.231] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [03:48:35.231] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [03:48:36.240] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway.discord.gg:443: Nieznany host (gateway.discord.gg)
@@ -2917,12 +2917,12 @@ Caused by: java.net.UnknownHostException: gateway.discord.gg
 [03:50:19.354] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
 [03:50:19.721] [main] [INFO] Loading complete! Done in 2s 919ms...
 [03:52:39.526] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -2970,7 +2970,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[03:52:39.544] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[03:52:39.544] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [03:52:39.546] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [03:52:40.564] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-d.discord.gg:443: Nieznany host (gateway-us-east1-d.discord.gg)
@@ -3066,12 +3066,12 @@ Caused by: java.net.UnknownHostException: Nieznany host (gateway-us-east1-d.disc
 [03:55:50.896] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
 [03:55:51.257] [main] [INFO] Loading complete! Done in 2s 950ms...
 [03:56:48.576] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -3119,7 +3119,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[03:56:48.591] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[03:56:48.591] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [03:56:48.594] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [03:56:49.612] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-d.discord.gg:443: Nieznany host (gateway-us-east1-d.discord.gg)
@@ -3284,12 +3284,12 @@ Caused by: java.net.UnknownHostException: discord.com
 [04:00:01.145] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
 [04:00:01.576] [main] [INFO] Loading complete! Done in 3s 761ms...
 [04:00:54.083] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -3337,7 +3337,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[04:00:54.097] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[04:00:54.097] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [04:00:54.099] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [04:00:55.105] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-b.discord.gg:443: Nieznany host (gateway-us-east1-b.discord.gg)
@@ -3480,12 +3480,12 @@ Caused by: java.net.UnknownHostException: discord.com
 [04:04:44.422] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
 [04:04:44.790] [main] [INFO] Loading complete! Done in 3s 539ms...
 [04:05:04.941] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -3533,7 +3533,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[04:05:04.961] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[04:05:04.961] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [04:05:04.964] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [04:05:05.975] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-c.discord.gg:443: Nieznany host (gateway-us-east1-c.discord.gg)
@@ -3605,12 +3605,12 @@ Caused by: java.net.UnknownHostException: Nieznany host (gateway-us-east1-c.disc
 [04:07:25.303] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
 [04:07:25.678] [main] [INFO] Loading complete! Done in 3s 122ms...
 [04:09:08.608] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -3658,7 +3658,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[04:09:08.622] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[04:09:08.622] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [04:09:08.625] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [04:09:26.291] [main] [INFO] Active version: v1.0 - Author: Nightusio
 [04:09:26.293] [main] [INFO] Loading StormCity resources...
@@ -3705,12 +3705,12 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 [04:12:43.161] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
 [04:12:43.560] [main] [INFO] Loading complete! Done in 4s 857ms...
 [04:13:14.967] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -3758,7 +3758,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[04:13:14.981] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[04:13:14.981] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [04:13:14.983] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [04:13:15.985] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-b.discord.gg:443: Nieznany host (gateway-us-east1-b.discord.gg)
@@ -3902,12 +3902,12 @@ Caused by: java.net.UnknownHostException: discord.com
 [10:43:16.395] [main] [INFO] Loading complete! Done in 3s 413ms...
 [10:46:32.405] [Javacord - Central ExecutorService - 1] [INFO] Ticket deleted: 1162934280738058381
 [12:06:47.101] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -3955,15 +3955,15 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[12:06:47.123] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[12:06:47.123] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [12:06:47.126] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [12:11:10.788] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -4011,7 +4011,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[12:11:10.793] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[12:11:10.793] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [12:11:10.793] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [12:11:11.804] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway-us-east1-b.discord.gg:443: Nieznany host (gateway-us-east1-b.discord.gg)
@@ -4038,12 +4038,12 @@ Caused by: java.net.UnknownHostException: Nieznany host (gateway-us-east1-b.disc
 	... 11 common frames omitted
 [12:11:11.804] [Javacord - Central Scheduler - 1] [INFO] Trying to reconnect/resume in 2 seconds!
 [12:15:33.649] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -4091,15 +4091,15 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[12:15:33.653] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[12:15:33.653] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [12:15:33.653] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [12:24:17.739] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -4147,15 +4147,15 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[12:24:17.743] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[12:24:17.743] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [12:24:17.743] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [12:58:31.926] [ReadingThread] [WARN] Websocket error!
-com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+com.neovisionaries.ws.client.WebSocketException: An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at com.neovisionaries.ws.client.ReadingThread.readFrame(ReadingThread.java:375)
 	at com.neovisionaries.ws.client.ReadingThread.main(ReadingThread.java:99)
 	at com.neovisionaries.ws.client.ReadingThread.runMain(ReadingThread.java:64)
 	at com.neovisionaries.ws.client.WebSocketThread.run(WebSocketThread.java:45)
-Caused by: java.net.SocketException: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie
+Caused by: java.net.SocketException: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
@@ -4203,7 +4203,7 @@ Caused by: java.net.SocketException: Connection or outbound has closed
 	at com.neovisionaries.ws.client.WritingThread.flush(WritingThread.java:271)
 	at com.neovisionaries.ws.client.WritingThread.doFlush(WritingThread.java:422)
 	... 4 common frames omitted
-[12:58:31.929] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawi¹zane po³¹czenie zosta³o przerwane przez oprogramowanie zainstalowane w komputerze-hoœcie' and code VIOLATED (1008) by client!
+[12:58:31.929] [WritingThread] [INFO] Websocket closed with reason 'An I/O error occurred while a frame was being read from the web socket: Nawiï¿½zane poï¿½ï¿½czenie zostaï¿½o przerwane przez oprogramowanie zainstalowane w komputerze-hoï¿½cie' and code VIOLATED (1008) by client!
 [12:58:31.929] [WritingThread] [INFO] Trying to reconnect/resume in 1 seconds!
 [12:58:32.944] [Javacord - Central Scheduler - 1] [WARN] An error occurred while connecting to websocket
 com.neovisionaries.ws.client.WebSocketException: Failed to resolve hostname gateway.discord.gg:443: Nieznany host (gateway.discord.gg)
@@ -4252,3 +4252,25 @@ Caused by: java.net.UnknownHostException: gateway.discord.gg
 	at com.neovisionaries.ws.client.SocketConnector.resolveHostname(SocketConnector.java:139)
 	... 12 common frames omitted
 [12:58:35.989] [Javacord - Central Scheduler - 1] [INFO] Trying to reconnect/resume in 4 seconds!
+[13:17:23.225] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[13:17:23.225] [main] [INFO] Loading HellHard resources...
+[13:17:23.309] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [72 ms]
+[13:17:26.143] [main] [INFO] Logged in as HellHard (1163067564478439525)
+[13:17:26.181] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [34 ms]
+[13:17:26.210] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [24 ms]
+[13:17:26.210] [main] [INFO] Added injectable object: StorageConfig
+[13:17:26.245] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'hellhard', type = 'FLAT' } [30 ms]
+[13:17:26.252] [main] [INFO] Added repository component: MemberRepository [6 ms]
+[13:17:26.267] [main] [INFO] Added configuration component: TicketConfig { path = 'ticket.yml', subconfigs = '' } [15 ms]
+[13:17:26.271] [main] [INFO] Added object component: TicketManager [2 ms]
+[13:17:26.277] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [5 ms]
+[13:17:26.280] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [2 ms]
+[13:17:26.281] [main] [INFO] Added object component: TicketHandler [0 ms]
+[13:17:26.282] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [1 ms]
+[13:17:26.282] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[13:17:26.286] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [3 ms]
+[13:17:26.287] [main] [INFO] Added listener (event) component: TicketButtonListener { type = 'ButtonClickListener' } [1 ms]
+[13:17:26.288] [main] [INFO] Added listener (event) component: TicketMenuListener { type = 'SelectMenuChooseListener' } [0 ms]
+[13:17:26.290] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
+[13:17:26.291] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
+[13:17:26.781] [main] [INFO] Loading complete! Done in 3s 761ms...
