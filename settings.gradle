@@ -1,0 +1,3 @@
+rootProject.name = 'stormcity-discord'
+
+include 'bot-core'

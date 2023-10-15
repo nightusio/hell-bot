@@ -1,0 +1,46 @@
+dependencies {
+    // -- javacord --
+    implementation 'org.javacord:javacord:3.8.0'
+    implementation 'org.apache.logging.log4j:log4j-to-slf4j:2.17.0'
+
+    // -- logger --
+    implementation 'ch.qos.logback:logback-core:1.4.6'
+    implementation 'ch.qos.logback:logback-classic:1.4.6'
+    implementation "org.slf4j:slf4j-api:2.0.6"
+
+    // -- dream-platform --
+    implementation "cc.dreamcode.platform:core:1.9.6-pre.5"
+    implementation "cc.dreamcode.platform:javacord:1.9.4"
+    implementation "cc.dreamcode.platform:javacord-config:1.9.6-pre.5"
+    implementation "cc.dreamcode.platform:persistence:1.9.4"
+
+    // -- dream-utilities --
+    implementation "cc.dreamcode:utilities:1.2.15"
+
+    // -- configs--
+    implementation 'eu.okaeri:okaeri-configs-yaml-snakeyaml:5.0.0-beta.5'
+    implementation 'eu.okaeri:okaeri-configs-serdes-commons:5.0.0-beta.5'
+
+    // -- persistence data --
+    implementation 'eu.okaeri:okaeri-persistence-flat:2.0.0-beta.1'
+    implementation 'eu.okaeri:okaeri-persistence-jdbc:2.0.0-beta.1'
+    implementation 'eu.okaeri:okaeri-persistence-mongo:2.0.0-beta.1'
+
+    // -- persistence data configure --
+    implementation 'eu.okaeri:okaeri-configs-json-gson:5.0.0-beta.5'
+    implementation 'eu.okaeri:okaeri-configs-json-simple:5.0.0-beta.5'
+
+    // -- placeholders --
+    implementation 'eu.okaeri:okaeri-placeholders-core:4.0.7'
+
+    // -- injector --
+    implementation 'eu.okaeri:okaeri-injector:2.1.0'
+}
+
+shadowJar {
+    archiveFileName = "Dream-Bot.jar"
+
+    manifest {
+        attributes 'Main-Class': 'cc.dreamcode.template.TemplateBot'
+    }
+}

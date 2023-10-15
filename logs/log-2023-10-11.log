@@ -1,0 +1,310 @@
+[10:34:13.229] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[10:34:13.231] [main] [INFO] Loading StormCity resources...
+[10:34:13.365] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [115 ms]
+[10:34:16.679] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[10:34:16.752] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [67 ms]
+[10:34:16.779] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [25 ms]
+[10:34:16.780] [main] [INFO] Added injectable object: StorageConfig
+[10:34:16.826] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [29 ms]
+[10:34:16.842] [main] [INFO] Added repository component: MemberRepository [15 ms]
+[10:34:16.854] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [10 ms]
+[10:34:16.858] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [3 ms]
+[10:34:16.861] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [2 ms]
+[10:34:16.866] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [4 ms]
+[10:34:16.867] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [0 ms]
+[10:34:16.869] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [1 ms]
+[10:34:16.870] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [0 ms]
+[10:34:16.872] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
+[10:34:16.873] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[10:34:17.937] [main] [INFO] Loading complete! Done in 5s 74ms...
+[10:34:55.525] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[10:34:55.526] [main] [INFO] Loading StormCity resources...
+[10:34:55.619] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [77 ms]
+[10:34:58.789] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[10:34:58.872] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [79 ms]
+[10:34:58.885] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [11 ms]
+[10:34:58.885] [main] [INFO] Added injectable object: StorageConfig
+[10:34:58.937] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [45 ms]
+[10:34:58.946] [main] [INFO] Added repository component: MemberRepository [8 ms]
+[10:34:58.957] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [8 ms]
+[10:34:58.960] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [2 ms]
+[10:34:58.964] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [3 ms]
+[10:34:58.969] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [3 ms]
+[10:34:58.971] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [0 ms]
+[10:34:58.973] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[10:34:58.975] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [1 ms]
+[10:34:58.977] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [2 ms]
+[10:34:58.979] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [0 ms]
+[10:34:59.651] [main] [INFO] Loading complete! Done in 4s 373ms...
+[10:35:24.604] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[10:35:24.606] [main] [INFO] Loading StormCity resources...
+[10:35:24.707] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [83 ms]
+[10:35:27.932] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[10:35:27.997] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [60 ms]
+[10:35:28.008] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [10 ms]
+[10:35:28.008] [main] [INFO] Added injectable object: StorageConfig
+[10:35:28.048] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [34 ms]
+[10:35:28.057] [main] [INFO] Added repository component: MemberRepository [8 ms]
+[10:35:28.064] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [6 ms]
+[10:35:28.068] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [3 ms]
+[10:35:28.072] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [2 ms]
+[10:35:28.075] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [2 ms]
+[10:35:28.076] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [0 ms]
+[10:35:28.077] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[10:35:28.079] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [0 ms]
+[10:35:28.080] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
+[10:35:28.082] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[10:35:28.484] [main] [INFO] Loading complete! Done in 4s 140ms...
+[10:35:48.214] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[10:35:48.215] [main] [INFO] Loading StormCity resources...
+[10:35:48.341] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [106 ms]
+[10:35:51.537] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[10:35:51.607] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [58 ms]
+[10:35:51.619] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [11 ms]
+[10:35:51.620] [main] [INFO] Added injectable object: StorageConfig
+[10:35:51.661] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [33 ms]
+[10:35:51.669] [main] [INFO] Added repository component: MemberRepository [7 ms]
+[10:35:51.679] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [8 ms]
+[10:35:51.688] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [7 ms]
+[10:35:51.691] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [2 ms]
+[10:35:51.695] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [2 ms]
+[10:35:51.696] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [1 ms]
+[10:35:51.697] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [1 ms]
+[10:35:51.698] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [0 ms]
+[10:35:51.700] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
+[10:35:51.702] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[10:35:52.474] [main] [INFO] Loading complete! Done in 4s 557ms...
+[10:36:18.911] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[10:36:18.911] [main] [INFO] Loading StormCity resources...
+[10:36:19.016] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [89 ms]
+[10:36:22.189] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[10:36:22.268] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [64 ms]
+[10:36:22.279] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [9 ms]
+[10:36:22.279] [main] [INFO] Added injectable object: StorageConfig
+[10:36:22.324] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [39 ms]
+[10:36:22.333] [main] [INFO] Added repository component: MemberRepository [8 ms]
+[10:36:22.343] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [7 ms]
+[10:36:22.347] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [2 ms]
+[10:36:22.350] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [3 ms]
+[10:36:22.354] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [2 ms]
+[10:36:22.355] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [1 ms]
+[10:36:22.356] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[10:36:22.358] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [1 ms]
+[10:36:22.359] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
+[10:36:22.361] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[10:36:22.905] [main] [INFO] Loading complete! Done in 4s 271ms...
+[10:37:33.482] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[10:37:33.483] [main] [INFO] Loading StormCity resources...
+[10:37:33.584] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [82 ms]
+[10:37:36.904] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[10:37:36.991] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [80 ms]
+[10:37:37.027] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [24 ms]
+[10:37:37.028] [main] [INFO] Added injectable object: StorageConfig
+[10:37:37.071] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [36 ms]
+[10:37:37.084] [main] [INFO] Added repository component: MemberRepository [12 ms]
+[10:37:37.094] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [8 ms]
+[10:37:37.099] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [4 ms]
+[10:37:37.104] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [3 ms]
+[10:37:37.108] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [3 ms]
+[10:37:37.110] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [1 ms]
+[10:37:37.111] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[10:37:37.113] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [0 ms]
+[10:37:37.115] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
+[10:37:37.117] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[10:37:37.552] [main] [INFO] Loading complete! Done in 4s 362ms...
+[10:38:20.708] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[10:38:20.709] [main] [INFO] Loading StormCity resources...
+[10:38:20.804] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [80 ms]
+[10:38:23.091] [Javacord - Handlers Processor] [WARN] Couldn't handle packet of type INTERACTION_CREATE. Please contact the developer! (packet: {"version":1,"type":3,"token":"aW50ZXJhY3Rpb246MTE2MTU4MzU2ODUxNDk3Mzc2NjpvYVpxNm12Vm9YVDhwUnpyckRYUDR2bGM0QzIwRUlsT0t0Z3JJUktKa2phcXcxaWNUVDFZOHhGZmdTSFRwcDRhUFFuVnhyOTRaaGdKeW1SUmhkc1FSQ1BxRmNnWUtiZW9pYjRIMUJLR1I3ck1ZYTdmU1kyeE5ZU0JnM0tVV0NlVA","message":{"type":0,"tts":false,"timestamp":"2023-10-11T08:36:31.275000+00:00","pinned":false,"mentions":[],"mention_roles":[],"mention_everyone":false,"id":"1161583096076959754","flags":0,"embeds":[{"type":"rich","title":"StormCity | Ticket","timestamp":"2023-10-11T08:36:29.924000+00:00","footer":{"text":"StormCity | 2023"},"fields":[{"value":"","name":"","inline":false},{"value":"Bezpodstawne tworzenie ticketow bedzie karane!","name":"INFORMACJA:","inline":false}],"description":"Kliknij przycisk ponizej aby stworzyc ticket","color":65280}],"edited_timestamp":null,"content":"","components":[{"type":1,"components":[{"type":2,"style":1,"label":"Zweryfikuj siê","custom_id":"ticket"}]}],"channel_id":"1028689132735701012","author":{"username":"StormCity","public_flags":0,"id":"1155940171020247121","global_name":null,"discriminator":"9791","bot":true,"avatar_decoration_data":null,"avatar":null},"attachments":[]},"member":{"user":{"username":"nightusio","public_flags":0,"id":"852945414839074836","global_name":"night","discriminator":"0","avatar_decoration_data":null,"avatar":"ec8a0b752940c7630aafb4d00bb73eed"},"unusual_dm_activity_until":null,"roles":["1155223651566768258","1028656959148261437"],"premium_since":null,"permissions":"562949953421311","pending":false,"nick":null,"mute":false,"joined_at":"2023-09-23T19:21:27.967000+00:00","flags":0,"deaf":false,"communication_disabled_until":null,"avatar":null},"locale":"pl","id":"1161583568514973766","guild_locale":"pl","guild_id":"1028653133955596318","guild":{"locale":"pl","id":"1028653133955596318","features":["PREVIEW_ENABLED","CHANNEL_ICON_EMOJIS_GENERATED","NEWS","AUTO_MODERATION","MEMBER_VERIFICATION_GATE_ENABLED","SOUNDBOARD","COMMUNITY"]},"entitlements":[],"entitlement_sku_ids":[],"data":{"custom_id":"ticket","component_type":2},"channel_id":"1028689132735701012","channel":{"type":0,"topic":null,"theme_color":null,"rate_limit_per_user":0,"position":82,"permissions":"562949953421311","parent_id":"1028689071414972537","nsfw":false,"name":"?wszyscy","last_pin_timestamp":"2023-08-02T20:59:12+00:00","last_message_id":"1161583096076959754","id":"1028689132735701012","icon_emoji":{"name":"?","id":null},"guild_id":"1028653133955596318","flags":0,"default_thread_rate_limit_per_user":0},"application_id":"1155940171020247121","app_permissions":"562949953421311"})
+java.lang.AssertionError: null
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.javacord.core.interaction.InteractionImpl.<init>(InteractionImpl.java:80)
+	at org.javacord.core.interaction.MessageComponentInteractionImpl.<init>(MessageComponentInteractionImpl.java:33)
+	at org.javacord.core.interaction.ButtonInteractionImpl.<init>(ButtonInteractionImpl.java:18)
+	at org.javacord.core.util.handler.interaction.InteractionCreateHandler.handle(InteractionCreateHandler.java:105)
+	at org.javacord.core.util.gateway.PacketHandler.lambda$handlePacket$0(PacketHandler.java:51)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+[10:38:23.904] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[10:38:24.014] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [102 ms]
+[10:38:24.041] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [24 ms]
+[10:38:24.041] [main] [INFO] Added injectable object: StorageConfig
+[10:38:24.093] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [40 ms]
+[10:38:24.102] [main] [INFO] Added repository component: MemberRepository [8 ms]
+[10:38:24.111] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [8 ms]
+[10:38:24.116] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [3 ms]
+[10:38:24.119] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [2 ms]
+[10:38:24.123] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [3 ms]
+[10:38:24.125] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [0 ms]
+[10:38:24.126] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[10:38:24.129] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [0 ms]
+[10:38:24.130] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
+[10:38:24.133] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[10:38:24.747] [main] [INFO] Loading complete! Done in 4s 309ms...
+[10:41:01.613] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[10:41:01.614] [main] [INFO] Loading StormCity resources...
+[10:41:01.710] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [79 ms]
+[10:41:04.448] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[10:41:04.575] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [102 ms]
+[10:41:04.587] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [10 ms]
+[10:41:04.587] [main] [INFO] Added injectable object: StorageConfig
+[10:41:04.623] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [27 ms]
+[10:41:04.630] [main] [INFO] Added repository component: MemberRepository [6 ms]
+[10:41:04.638] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [6 ms]
+[10:41:04.643] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [3 ms]
+[10:41:04.645] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [1 ms]
+[10:41:04.650] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [2 ms]
+[10:41:04.651] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [1 ms]
+[10:41:04.652] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[10:41:04.653] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [0 ms]
+[10:41:04.654] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [0 ms]
+[10:41:04.656] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[10:41:05.183] [main] [INFO] Loading complete! Done in 3s 839ms...
+[12:09:37.860] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[12:09:37.865] [main] [INFO] Loading StormCity resources...
+[12:09:37.974] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [88 ms]
+[12:09:41.262] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[12:09:41.385] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [115 ms]
+[12:09:41.400] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [14 ms]
+[12:09:41.400] [main] [INFO] Added injectable object: StorageConfig
+[12:09:41.449] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [31 ms]
+[12:09:41.458] [main] [INFO] Added repository component: MemberRepository [8 ms]
+[12:09:41.467] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [7 ms]
+[12:09:41.472] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [4 ms]
+[12:09:41.478] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [5 ms]
+[12:09:41.488] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [8 ms]
+[12:09:41.489] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [0 ms]
+[12:09:41.491] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[12:09:41.494] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [1 ms]
+[12:09:41.496] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [1 ms]
+[12:09:41.498] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[12:09:42.189] [main] [INFO] Loading complete! Done in 4s 630ms...
+[12:10:01.685] [Javacord - Central ExecutorService - 1] [ERROR] Unhandled exception in a listener thread for Storm City!
+java.lang.ClassCastException: java.util.concurrent.CompletableFuture incompatible with org.javacord.api.entity.message.Messageable
+	at me.night.stormcity.listener.ButtonListener.onButtonClick(ButtonListener.java:42)
+	at org.javacord.core.util.event.EventDispatcher.lambda$dispatchButtonClickEvent$25(EventDispatcher.java:1301)
+	at org.javacord.core.util.event.EventDispatcherBase.lambda$dispatchEvent$12(EventDispatcherBase.java:215)
+	at org.javacord.core.util.event.EventDispatcherBase.lambda$checkRunningListenersAndStartIfPossible$20(EventDispatcherBase.java:289)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:857)
+[12:15:53.022] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[12:15:53.024] [main] [INFO] Loading StormCity resources...
+[12:15:53.149] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [107 ms]
+[12:15:56.035] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[12:15:56.141] [main] [ERROR] An error was caught when plugin are starting...
+eu.okaeri.configs.exception.OkaeriException: failed to initialize me.night.stormcity.config.MessageConfig [class eu.okaeri.configs.yaml.snakeyaml.YamlSnakeYamlConfigurer]
+	at eu.okaeri.configs.ConfigManager.create(ConfigManager.java:41)
+	at cc.dreamcode.platform.javacord.component.ConfigurationComponentResolver.resolve(ConfigurationComponentResolver.java:73)
+	at cc.dreamcode.platform.component.ComponentClassResolver.process(ComponentClassResolver.java:21)
+	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:60)
+	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:72)
+	at me.night.stormcity.StormBot.enable(StormBot.java:68)
+	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.initialize(DreamJavacordPlatform.java:67)
+	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.run(DreamJavacordPlatform.java:158)
+	at me.night.stormcity.StormBot.main(StormBot.java:42)
+Caused by: eu.okaeri.configs.exception.OkaeriException: failed to #getValue for ticket-interaction
+	at eu.okaeri.configs.OkaeriConfig.update(OkaeriConfig.java:649)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:469)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:491)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:505)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:479)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:426)
+	at cc.dreamcode.platform.javacord.component.ConfigurationComponentResolver.lambda$resolve$1(ConfigurationComponentResolver.java:77)
+	at eu.okaeri.configs.ConfigManager.create(ConfigManager.java:38)
+	... 8 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final byte[] java.lang.String.value accessible: module java.base does not "opens java.lang" to unnamed module @8c24148b
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
+	at eu.okaeri.configs.schema.FieldDeclaration.lambda$of$0(FieldDeclaration.java:44)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1745)
+	at eu.okaeri.configs.schema.FieldDeclaration.of(FieldDeclaration.java:41)
+	at eu.okaeri.configs.schema.ConfigDeclaration.lambda$readFields$3(ConfigDeclaration.java:108)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:522)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:512)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:239)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at eu.okaeri.configs.schema.ConfigDeclaration.readFields(ConfigDeclaration.java:110)
+	at eu.okaeri.configs.schema.ConfigDeclaration.of(ConfigDeclaration.java:46)
+	at eu.okaeri.configs.configurer.Configurer.resolveType(Configurer.java:358)
+	at eu.okaeri.configs.configurer.Configurer.getValue(Configurer.java:210)
+	at eu.okaeri.configs.OkaeriConfig.update(OkaeriConfig.java:647)
+	... 15 common frames omitted
+[12:16:31.167] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[12:16:31.169] [main] [INFO] Loading StormCity resources...
+[12:16:31.316] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [123 ms]
+[12:16:34.119] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[12:16:34.177] [main] [ERROR] An error was caught when plugin are starting...
+eu.okaeri.configs.exception.OkaeriException: failed to initialize me.night.stormcity.config.MessageConfig [class eu.okaeri.configs.yaml.snakeyaml.YamlSnakeYamlConfigurer]
+	at eu.okaeri.configs.ConfigManager.create(ConfigManager.java:41)
+	at cc.dreamcode.platform.javacord.component.ConfigurationComponentResolver.resolve(ConfigurationComponentResolver.java:73)
+	at cc.dreamcode.platform.component.ComponentClassResolver.process(ComponentClassResolver.java:21)
+	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:60)
+	at cc.dreamcode.platform.component.ComponentManager.registerComponent(ComponentManager.java:72)
+	at me.night.stormcity.StormBot.enable(StormBot.java:68)
+	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.initialize(DreamJavacordPlatform.java:67)
+	at cc.dreamcode.platform.javacord.DreamJavacordPlatform.run(DreamJavacordPlatform.java:158)
+	at me.night.stormcity.StormBot.main(StormBot.java:42)
+Caused by: eu.okaeri.configs.exception.OkaeriException: failed to #getValue for ticket-interaction
+	at eu.okaeri.configs.OkaeriConfig.update(OkaeriConfig.java:649)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:469)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:491)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:505)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:479)
+	at eu.okaeri.configs.OkaeriConfig.load(OkaeriConfig.java:426)
+	at cc.dreamcode.platform.javacord.component.ConfigurationComponentResolver.lambda$resolve$1(ConfigurationComponentResolver.java:77)
+	at eu.okaeri.configs.ConfigManager.create(ConfigManager.java:38)
+	... 8 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final byte[] java.lang.String.value accessible: module java.base does not "opens java.lang" to unnamed module @d94081d3
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
+	at eu.okaeri.configs.schema.FieldDeclaration.lambda$of$0(FieldDeclaration.java:44)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1745)
+	at eu.okaeri.configs.schema.FieldDeclaration.of(FieldDeclaration.java:41)
+	at eu.okaeri.configs.schema.ConfigDeclaration.lambda$readFields$3(ConfigDeclaration.java:108)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:522)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:512)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:239)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at eu.okaeri.configs.schema.ConfigDeclaration.readFields(ConfigDeclaration.java:110)
+	at eu.okaeri.configs.schema.ConfigDeclaration.of(ConfigDeclaration.java:46)
+	at eu.okaeri.configs.configurer.Configurer.resolveType(Configurer.java:358)
+	at eu.okaeri.configs.configurer.Configurer.getValue(Configurer.java:210)
+	at eu.okaeri.configs.OkaeriConfig.update(OkaeriConfig.java:647)
+	... 15 common frames omitted
+[12:17:19.301] [main] [INFO] Active version: v1.0 - Author: Nightusio
+[12:17:19.302] [main] [INFO] Loading StormCity resources...
+[12:17:19.413] [main] [INFO] Added configuration component: TokenConfig { path = 'token.yml', subconfigs = '' } [95 ms]
+[12:17:22.000] [main] [INFO] Logged in as StormCity (1155940171020247121)
+[12:17:22.082] [main] [INFO] Added configuration component: MessageConfig { path = 'messages.yml', subconfigs = '' } [66 ms]
+[12:17:22.092] [main] [INFO] Added configuration component: BotConfig { path = 'config.yml', subconfigs = 'storageConfig' } [9 ms]
+[12:17:22.092] [main] [INFO] Added injectable object: StorageConfig
+[12:17:22.124] [main] [INFO] Added persistence component: DocumentPersistence { prefix = 'stormcity', type = 'FLAT' } [26 ms]
+[12:17:22.131] [main] [INFO] Added repository component: MemberRepository [6 ms]
+[12:17:22.138] [main] [INFO] Added listener (event) component: ExampleListener { type = 'MessageCreateListener' } [6 ms]
+[12:17:22.142] [main] [INFO] Added command component: ExampleCommand { name = 'ping' } [2 ms]
+[12:17:22.144] [main] [INFO] Added command component: ReloadCommand { name = 'reload' } [2 ms]
+[12:17:22.152] [main] [INFO] Added command component: EmbedCommand { name = 'embed' } [7 ms]
+[12:17:22.153] [main] [INFO] Added command component: TicketCommand { name = 'ticket' } [1 ms]
+[12:17:22.154] [main] [INFO] Added command component: VerifyCommand { name = 'verify' } [0 ms]
+[12:17:22.158] [main] [INFO] Added listener (event) component: ButtonListener { type = 'ButtonClickListener' } [3 ms]
+[12:17:22.159] [main] [INFO] Added listener (event) component: MessageSentListener { type = 'MessageCreateListener' } [0 ms]
+[12:17:22.161] [main] [INFO] Added listener (event) component: JoinListener { type = 'ServerMemberJoinListener' } [1 ms]
+[12:17:22.584] [main] [INFO] Loading complete! Done in 3s 574ms...

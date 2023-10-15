@@ -1,0 +1,20 @@
+## StormCity (Ticket-Config) ##
+debug: true
+tickets:
+- userID: 852945414839074836
+  ticketType: INNE
+  channelID: '1162928538236751872'
+# Ticket channel ID
+ticket-channel-id: '1063540995217690644'
+# Categories: INNE
+inne-button-id-menu: ticket_inne
+inne-button-close: ticket_inne_close
+inne-button-confirm-close: ticket_inne_confirmClose
+inne-button-delete: ticket_inne_delete
+inne-ticket-name: inne-
+# Categories: MINECRAFT
+minecraft-button-id-menu: ticket_minecraft
+minecraft-button-close: ticket_minecraft_close
+minecraft-button-confirm-close: ticket_minecraft_confirmClose
+minecraft-button-delete: ticket_minecraft_delete
+minecraft-ticket-name: minecraft-
