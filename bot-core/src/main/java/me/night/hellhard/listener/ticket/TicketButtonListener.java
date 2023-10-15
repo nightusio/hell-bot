@@ -45,6 +45,8 @@ public class TicketButtonListener implements ButtonClickListener {
 
         Ticket ticket = ticketManager.getExistingTicket(channel.getIdAsString());
 
+        if(ticket == null) return;
+
        if (event.getButtonInteraction().getCustomId().equals(ticketConfig.inneButtonClose)) {
             ticketHandler.confirmTicketClose(event, ticketConfig.inneButtonConfirmClose, ticket.getChannelID());
         } else if (event.getButtonInteraction().getCustomId().equals(ticketConfig.inneButtonConfirmClose)) {

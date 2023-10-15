@@ -32,6 +32,7 @@ import me.night.hellhard.ticket.TicketSerdes;
 import me.night.hellhard.ticket.impl.TicketHandler;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
+import org.javacord.api.entity.activity.ActivityType;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -50,16 +51,22 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
         componentManager.registerComponent(TokenConfig.class, tokenConfig ->
                 token.set(tokenConfig.token));
 
-        return new DiscordApiBuilder()
+        DiscordApi discordApi = new DiscordApiBuilder()
                 .setToken(token.get())
                 .setAllIntents()
                 .login()
-                .whenComplete((discordApi, throwable) -> {
+                .whenComplete((api, throwable) -> {
                     if (throwable != null) {
-                        throw new JavacordPlatformException("Exception while logging in to Discord");
+                        throw new JavacordPlatformException("Exception while logging in to Discord", throwable);
+                    } else {
+                        api.updateActivity(ActivityType.PLAYING, "Your bot's status message");
                     }
                 })
                 .join();
+
+        discordApi.updateActivity(ActivityType.COMPETING, "HellHard.eu");
+
+        return discordApi;
     }
 
     @Override

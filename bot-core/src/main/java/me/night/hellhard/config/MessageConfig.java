@@ -14,7 +14,7 @@ import eu.okaeri.configs.annotation.Names;
 
 @Configuration(child = "messages.yml")
 @Headers({
-        @Header("## StormCity (Message-Config) ##"),
+        @Header("## HellHard (Message-Config) ##"),
         @Header("Dostepne type: (MESSAGE, EMBED)")
 })
 @Names(strategy = NameStrategy.HYPHEN_CASE, modifier = NameModifier.TO_LOWER_CASE)
@@ -27,8 +27,6 @@ public class MessageConfig extends OkaeriConfig {
             .setTitle("{title}")
             .setDescription("{message}")
             .setFooter("HellHard | 2023")
-            .setAuthor("{bot}")
-            .setImage("https://cdn.discordapp.com/attachments/1157576834108641304/1162828182253207673/HellHard-Logo.png?ex=653d5b22&is=652ae622&hm=acf50c1acf2fff46074b588f3028300a3fabf268362f166021104edb5d027955&")
             .setTimestampToNow());
 
     public Notice embedCommandSent = new Notice(NoticeType.MESSAGE, "[ ✅ ] Wyslano wiadomosc na kanal: <#{channel}>");
@@ -41,7 +39,6 @@ public class MessageConfig extends OkaeriConfig {
     public Notice proposition = new Notice(NoticeType.EMBED, new WrappedEmbedBuilder()
             .setTitle("Propozycja uzytkownika: {user}")
             .setDescription("{message}")
-            .setAuthor("{userAsUser}")
             .setFooter("HellHard | 2023")
             .setTimestampToNow());
 

@@ -49,10 +49,15 @@ public class EmbedCommand extends JavacordCommand {
             Channel channel = interaction.getArgumentByIndex(2).get().getChannelValue().get();
             String message = interaction.getArgumentByIndex(1).get().getStringRepresentationValue().get();
 
-            messageConfig.embedCommand.send((Messageable) channel, new MapBuilder<String, Object>()
-                    .put("title", title)
-                    .put("message", message)
-                    .build());
+            try {
+                messageConfig.embedCommand.send(channel.asServerTextChannel().get(), new MapBuilder<String, Object>()
+                        .put("title", title)
+                        .put("message", message)
+                        .build());
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
+
 
 
             responder.setFlags(MessageFlag.EPHEMERAL);

@@ -13,7 +13,7 @@ import me.night.hellhard.ticket.Ticket;
 import java.util.List;
 
 @Configuration(child = "ticket.yml")
-@Header("## StormCity (Ticket-Config) ##")
+@Header("## HellHard (Ticket-Config) ##")
 @Names(strategy = NameStrategy.HYPHEN_CASE, modifier = NameModifier.TO_LOWER_CASE)
 public class TicketConfig extends OkaeriConfig {
 
