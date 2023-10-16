@@ -12,21 +12,22 @@ import cc.dreamcode.platform.persistence.component.DocumentPersistenceComponentR
 import cc.dreamcode.platform.persistence.component.DocumentRepositoryComponentResolver;
 import me.night.hellhard.command.ReloadCommand;
 import me.night.hellhard.command.admin.EmbedCommand;
+import me.night.hellhard.command.admin.PollCommand;
 import me.night.hellhard.command.admin.TicketCommand;
 import me.night.hellhard.command.admin.VerifyCommand;
-import me.night.hellhard.config.BotConfig;
-import me.night.hellhard.config.MessageConfig;
-import me.night.hellhard.config.TicketConfig;
-import me.night.hellhard.config.TokenConfig;
+import me.night.hellhard.config.*;
 import me.night.hellhard.listener.ButtonListener;
 import me.night.hellhard.listener.JoinListener;
 import me.night.hellhard.listener.MessageSentListener;
+import me.night.hellhard.listener.poll.PollButtonListener;
 import me.night.hellhard.listener.ticket.TicketButtonListener;
 import me.night.hellhard.listener.ticket.TicketMenuListener;
 import me.night.hellhard.member.MemberRepository;
 import eu.okaeri.configs.serdes.OkaeriSerdesPack;
 import eu.okaeri.persistence.document.DocumentPersistence;
 import lombok.NonNull;
+import me.night.hellhard.poll.PollManager;
+import me.night.hellhard.poll.PollSerdes;
 import me.night.hellhard.ticket.TicketManager;
 import me.night.hellhard.ticket.TicketSerdes;
 import me.night.hellhard.ticket.impl.TicketHandler;
@@ -87,6 +88,10 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
         componentManager.registerComponent(TicketConfig.class);
         componentManager.registerComponent(TicketManager.class);
 
+        componentManager.registerComponent(PollConfig.class);
+        componentManager.registerComponent(PollManager.class);
+        componentManager.registerComponent(PollCommand.class);
+        componentManager.registerComponent(PollButtonListener.class);
 
         componentManager.registerComponent(ReloadCommand.class);
         componentManager.registerComponent(EmbedCommand.class);
@@ -113,8 +118,10 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
 
     @Override
     public @NonNull OkaeriSerdesPack getConfigSerdesPack() {
-        return registry -> registry.register(new TicketSerdes());
-    }
+        return registry -> {
+            registry.register(new TicketSerdes());
+            registry.register(new PollSerdes());
+        };    }
 
     @Override
     public @NonNull OkaeriSerdesPack getPersistenceSerdesPack() {

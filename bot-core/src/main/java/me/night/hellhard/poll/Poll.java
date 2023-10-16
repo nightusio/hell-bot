@@ -2,6 +2,7 @@ package me.night.hellhard.poll;
 
 import lombok.Data;
 import lombok.Getter;
+import me.night.hellhard.config.PollConfig;
 import org.javacord.api.entity.user.User;
 
 import java.util.HashSet;
@@ -12,14 +13,17 @@ import java.util.Set;
 public class Poll {
 
     private int id;
-    private long messageId;
     private int votesYes;
     private int votesNo;
     private Set<Long> votedUsers;
 
-    public Poll() {
-        votedUsers = new HashSet<>();
+    public Poll(int id) {
+        this.id = id;
+        this.votesYes = 0;
+        this.votesNo = 0;
+        this.votedUsers = new HashSet<>();
     }
+
 
     private void updateVotes(boolean voteYes) {
         if (voteYes) {
