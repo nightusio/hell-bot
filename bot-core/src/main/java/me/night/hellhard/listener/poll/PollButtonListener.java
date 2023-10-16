@@ -2,7 +2,6 @@ package me.night.hellhard.listener.poll;
 
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;
-import me.night.hellhard.config.BotConfig;
 import me.night.hellhard.config.PollConfig;
 import me.night.hellhard.poll.Poll;
 import me.night.hellhard.poll.PollManager;
@@ -12,8 +11,6 @@ import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.user.User;
 import org.javacord.api.event.interaction.ButtonClickEvent;
 import org.javacord.api.listener.interaction.ButtonClickListener;
-
-import java.util.Optional;
 
 @RequiredArgsConstructor(onConstructor_ = @Inject)
 public class PollButtonListener implements ButtonClickListener {
@@ -26,7 +23,7 @@ public class PollButtonListener implements ButtonClickListener {
         User user = event.getInteraction().getUser();
         Poll poll = pollManager.getPollById(event.getButtonInteraction().getCustomId());
 
-        if(poll == null) return;
+        if (poll == null) return;
 
         if (event.getButtonInteraction().getCustomId().contains("pollyes-" + poll.getId())) {
             PollType pollType = poll.addVote(user, true);
