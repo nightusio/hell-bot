@@ -2,14 +2,28 @@ package me.night.helldev.functionality.ticket;
 
 import lombok.Data;
 import lombok.Getter;
-import me.night.helldev.functionality.shared.SharedType;
+
+import java.util.Set;
 
 @Data
 @Getter
 public class Ticket {
 
-    private final long userID;
-    private final SharedType sharedType;
-    private final String channelID;
+    private int id;
+    private long userId;
+    private String category;
+    private Set<Long> addedUsers;
+    private long channelId;
+    private long server;
+    private long messageId;
 
+    public Ticket(int id, long userId, String category, long server, Set<Long> addedUsers, long channelId, long messageId) {
+        this.id = id;
+        this.server = server;
+        this.userId = userId;
+        this.category = category;
+        this.addedUsers = addedUsers;
+        this.channelId = channelId;
+        this.messageId = messageId;
+    }
 }

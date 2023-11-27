@@ -11,33 +11,38 @@ import cc.dreamcode.platform.persistence.DreamPersistence;
 import cc.dreamcode.platform.persistence.component.DocumentPersistenceComponentResolver;
 import cc.dreamcode.platform.persistence.component.DocumentRepositoryComponentResolver;
 import me.night.helldev.command.admin.*;
+import me.night.helldev.command.admin.ticket.TicketCategoryCreateCommand;
+import me.night.helldev.command.admin.ticket.TicketCategoryDeleteCommand;
 import me.night.helldev.command.user.DropCommand;
+import me.night.helldev.command.user.ticket.TicketAddUserCommand;
+import me.night.helldev.command.user.ticket.TicketRemoveUserCommand;
 import me.night.helldev.config.*;
 import me.night.helldev.functionality.poll.PollConfig;
 import me.night.helldev.functionality.proposition.PropositionConfig;
 import me.night.helldev.functionality.proposition.PropositionManager;
 import me.night.helldev.functionality.proposition.PropositionSerdes;
 import me.night.helldev.functionality.ticket.TicketConfig;
+import me.night.helldev.functionality.ticket.TicketHandler;
+import me.night.helldev.functionality.ticket.TicketManager;
+import me.night.helldev.functionality.ticket.category.TicketCategoryManager;
+import me.night.helldev.functionality.ticket.category.TicketCategorySerdes;
+import me.night.helldev.functionality.ticket.listener.TicketButtonListener;
+import me.night.helldev.functionality.ticket.listener.TicketMenuListener;
 import me.night.helldev.listener.ButtonListener;
 import me.night.helldev.listener.JoinListener;
 import me.night.helldev.listener.proposition.PropositionButtonListener;
 import me.night.helldev.listener.proposition.PropositionMessageListener;
 import me.night.helldev.listener.poll.PollButtonListener;
-import me.night.helldev.listener.ticket.TicketButtonListener;
-import me.night.helldev.listener.ticket.TicketMenuListener;
 import me.night.helldev.member.MemberRepository;
 import eu.okaeri.configs.serdes.OkaeriSerdesPack;
 import eu.okaeri.persistence.document.DocumentPersistence;
 import lombok.NonNull;
 import me.night.helldev.functionality.poll.PollManager;
 import me.night.helldev.functionality.poll.PollSerdes;
-import me.night.helldev.functionality.ticket.TicketManager;
 import me.night.helldev.functionality.ticket.TicketSerdes;
-import me.night.helldev.functionality.ticket.impl.TicketHandler;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.activity.ActivityType;
-import org.javacord.api.entity.intent.Intent;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -58,7 +63,7 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
 
         DiscordApi discordApi = new DiscordApiBuilder()
                 .setToken(token.get())
-                .addIntents(Intent.GUILD_INTEGRATIONS, Intent.DIRECT_MESSAGES, Intent.MESSAGE_CONTENT, Intent.GUILD_INVITES)
+                .setAllIntents()
                 .login()
                 .whenComplete((api, throwable) -> {
                     if (throwable != null) {
@@ -87,9 +92,19 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
             componentManager.registerComponent(MemberRepository.class);
         });
 
+        componentManager.registerComponent(ButtonListener.class);
+        componentManager.registerComponent(JoinListener.class);
+
         componentManager.registerComponent(TicketConfig.class);
+        componentManager.registerComponent(TicketCategoryManager.class);
         componentManager.registerComponent(TicketManager.class);
+        componentManager.registerComponent(TicketCategoryCreateCommand.class);
+        componentManager.registerComponent(TicketCategoryDeleteCommand.class);
         componentManager.registerComponent(TicketHandler.class);
+
+        componentManager.registerComponent(TicketAddUserCommand.class);
+        componentManager.registerComponent(TicketRemoveUserCommand.class);
+
         componentManager.registerComponent(TicketButtonListener.class);
         componentManager.registerComponent(TicketMenuListener.class);
 
@@ -110,9 +125,6 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
         componentManager.registerComponent(ClearCommand.class);
         componentManager.registerComponent(DropCommand.class);
 
-        componentManager.registerComponent(ButtonListener.class);
-        componentManager.registerComponent(JoinListener.class);
-
     }
 
     @Override
@@ -131,6 +143,7 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
             registry.register(new TicketSerdes());
             registry.register(new PollSerdes());
             registry.register(new PropositionSerdes());
+            registry.register(new TicketCategorySerdes());
         };    }
 
     @Override

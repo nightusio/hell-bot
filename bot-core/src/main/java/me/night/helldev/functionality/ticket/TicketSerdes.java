@@ -5,7 +5,10 @@ import eu.okaeri.configs.serdes.DeserializationData;
 import eu.okaeri.configs.serdes.ObjectSerializer;
 import eu.okaeri.configs.serdes.SerializationData;
 import lombok.NonNull;
-import me.night.helldev.functionality.shared.SharedType;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class TicketSerdes implements ObjectSerializer<Ticket> {
 
@@ -16,18 +19,33 @@ public class TicketSerdes implements ObjectSerializer<Ticket> {
 
     @Override
     public void serialize(@NonNull Ticket object, @NonNull SerializationData data, @NonNull GenericsDeclaration generics) {
-        data.add("userID", object.getUserID());
-        data.add("sharedType", object.getSharedType());
-        data.add("channelID", object.getChannelID());
+        data.add("id", object.getId());
+        data.add("userId", object.getUserId());
+        data.add("category", object.getCategory());
+        data.add("addedUsers", object.getAddedUsers());
+        data.add("server", object.getServer());
+        data.add("channelId", object.getChannelId());
+        data.add("messageId", object.getMessageId());
     }
 
     @Override
     public Ticket deserialize(@NonNull DeserializationData data, @NonNull GenericsDeclaration generics) {
         return new Ticket(
-                data.get("userID", long.class),
-                data.get("sharedType", SharedType.class),
-                data.get("channelID", String.class)
+                data.get("id", int.class),
+                data.get("userId", long.class),
+                data.get("category", String.class),
+                data.get("server", long.class),
+                toSet(data.get("addedUsers", List.class)),
+                data.get("channelId", long.class),
+                data.get("messageId", long.class)
+        );
+    }
 
-                );
+    @SuppressWarnings("unchecked")
+    private Set<Long> toSet(Object object) {
+        if (object instanceof List) {
+            return new HashSet<>((List<Long>) object);
+        }
+        throw new IllegalArgumentException("Expected List<Long> for addedUsers");
     }
 }

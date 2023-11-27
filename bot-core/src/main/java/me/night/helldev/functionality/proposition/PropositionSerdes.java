@@ -5,6 +5,9 @@ import eu.okaeri.configs.serdes.DeserializationData;
 import eu.okaeri.configs.serdes.ObjectSerializer;
 import eu.okaeri.configs.serdes.SerializationData;
 import lombok.NonNull;
+import me.night.helldev.functionality.poll.Poll;
+
+import java.util.*;
 
 public class PropositionSerdes implements ObjectSerializer<Proposition> {
 
@@ -27,7 +30,21 @@ public class PropositionSerdes implements ObjectSerializer<Proposition> {
     @Override
     public Proposition deserialize(@NonNull DeserializationData data, @NonNull GenericsDeclaration generics) {
         return new Proposition(
-                data.get("id", int.class)
+                data.get("id", int.class),
+                data.get("messageId", long.class),
+                data.get("textChannel", long.class),
+                data.get("votesYes", int.class),
+                data.get("votesNo", int.class),
+                toSet(data.get("votedUsers", List.class))
         );
     }
+
+    @SuppressWarnings("unchecked")
+    private Set<Long> toSet(Object object) {
+        if (object instanceof List) {
+            return new HashSet<>((List<Long>) object);
+        }
+        throw new IllegalArgumentException("Expected List<Long> for votedUsers");
+    }
+
 }

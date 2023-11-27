@@ -3,7 +3,7 @@ package me.night.helldev.functionality.proposition;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Optional;
+import java.util.*;
 
 @RequiredArgsConstructor(onConstructor_ = @Inject)
 public class PropositionManager {
@@ -13,12 +13,14 @@ public class PropositionManager {
 
     public Proposition createProposition() {
         int newPropositionId = generateUniquePropositionId();
-        Proposition proposition = new Proposition(newPropositionId);
+        Proposition proposition = new Proposition(newPropositionId, 0L, 0L, 0, 0, new HashSet<>());
+
         propositionConfig.propositions.add(proposition);
         propositionConfig.save();
 
         return proposition;
     }
+
 
     public void setMessageId(Proposition proposition, long messageId) {
         proposition.setMessageId(messageId);

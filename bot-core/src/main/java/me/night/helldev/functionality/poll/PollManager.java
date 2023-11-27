@@ -3,6 +3,7 @@ package me.night.helldev.functionality.poll;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;
 
+import java.util.HashSet;
 import java.util.Optional;
 
 @RequiredArgsConstructor(onConstructor_ = @Inject)
@@ -12,11 +13,12 @@ public class PollManager {
 
     public Poll createPoll() {
         int newPollId = generateUniquePollId();
-        Poll poll = new Poll(newPollId);
+        Poll poll = new Poll(newPollId, 0L, 0L, 0, 0, new HashSet<>());
         pollConfig.polls.add(poll);
         pollConfig.save();
         return poll;
     }
+
 
     public void setMessageId(Poll poll, long messageId) {
         poll.setMessageId(messageId);

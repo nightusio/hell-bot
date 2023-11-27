@@ -15,10 +15,6 @@ import java.util.Optional;
 @UtilityClass
 public class ButtonEditUtility {
 
-    public Message getMessageInTextChannel(long messageId, TextChannel textChannel) {
-        return textChannel.getMessageById(messageId).join();
-    }
-
     public void editActionRowsPoll(DiscordApi api, Poll poll) {
         long textChannelId = poll.getTextChannel();
         long messageId = poll.getMessageId();
@@ -28,7 +24,7 @@ public class ButtonEditUtility {
         if (textChannelOptional.isPresent()) {
             TextChannel textChannel = textChannelOptional.get();
 
-            Message message = getMessageInTextChannel(messageId, textChannel);
+            Message message = MessageUtility.getMessageInTextChannel(messageId, textChannel);
 
             if (message != null) {
 
@@ -56,7 +52,7 @@ public class ButtonEditUtility {
         if (textChannelOptional.isPresent()) {
             TextChannel textChannel = textChannelOptional.get();
 
-            Message message = getMessageInTextChannel(messageId, textChannel);
+            Message message = MessageUtility.getMessageInTextChannel(messageId, textChannel);
 
             if (message != null) {
 

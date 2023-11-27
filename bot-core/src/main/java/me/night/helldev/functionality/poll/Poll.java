@@ -19,14 +19,17 @@ public class Poll {
     private int votesNo;
     private Set<Long> votedUsers;
 
-    public Poll(int id) {
+    public Poll(int id, long messageId, long textChannel, int votesYes, int votesNo, Set<Long> votedUsers) {
         this.id = id;
-        this.messageId = 0L;
-        this.textChannel = 0L;
-        this.votesYes = 0;
-        this.votesNo = 0;
-        this.votedUsers = new HashSet<>();
+        this.messageId = messageId;
+        this.textChannel = textChannel;
+        this.votesYes = votesYes;
+        this.votesNo = votesNo;
+        this.votedUsers = votedUsers;
     }
+
+
+
 
     private void updateVotes(boolean voteYes) {
         if (voteYes) {

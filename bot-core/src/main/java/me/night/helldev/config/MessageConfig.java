@@ -60,4 +60,8 @@ public class MessageConfig extends OkaeriConfig {
     public Notice propositionNotSend = new Notice(NoticeType.MESSAGE, "[ ❌ ] Wyslana przez ciebie propozycja ma zablokowane slowa");
 
 
+    public Notice cannotCreateTicketCategory = new Notice(NoticeType.MESSAGE, "[ ❌ ] Wystapil blad podczas tworzenia kategori ticketu. Error: {error}");
+    public Notice successfullyCreateTicketCategory = new Notice(NoticeType.MESSAGE, "[ ✅ ] Pomyslnie utworzyles kategorie ticketu: {category_name} - <#{category_id}>");
+
+
 }

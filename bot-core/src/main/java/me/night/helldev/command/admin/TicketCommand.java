@@ -2,10 +2,13 @@ package me.night.helldev.command.admin;
 
 import cc.dreamcode.platform.javacord.component.command.JavacordCommand;
 import cc.dreamcode.utilities.builder.MapBuilder;
+import com.vdurmont.emoji.EmojiParser;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.NonNull;
 import me.night.helldev.config.MessageConfig;
-import me.night.helldev.functionality.ticket.TicketConfig;
+import me.night.helldev.functionality.ticket.category.TicketCategory;
+import me.night.helldev.functionality.ticket.category.TicketCategoryManager;
+import me.night.helldev.utility.MessageUtility;
 import org.javacord.api.entity.channel.Channel;
 import org.javacord.api.entity.channel.ServerChannel;
 import org.javacord.api.entity.channel.TextChannel;
@@ -27,14 +30,14 @@ import java.util.List;
 public class TicketCommand extends JavacordCommand {
 
     private final MessageConfig messageConfig;
-    private final TicketConfig ticketConfig;
+    private final TicketCategoryManager ticketCategoryManager;
 
     @Inject
-    public TicketCommand(final MessageConfig messageConfig, TicketConfig ticketConfig) {
+    public TicketCommand(final MessageConfig messageConfig, TicketCategoryManager ticketCategoryManager) {
         super("ticket", "Sends ticket embed");
 
         this.messageConfig = messageConfig;
-        this.ticketConfig = ticketConfig;
+        this.ticketCategoryManager = ticketCategoryManager;
 
         this.getSlashCommandBuilder().setDefaultEnabledForPermissions(PermissionType.ADMINISTRATOR);
 
@@ -63,15 +66,19 @@ public class TicketCommand extends JavacordCommand {
             if (textChannel.isEmpty()) {
                 return;
             }
+            SelectMenuBuilder selectMenuBuilder = createSelectMenu();
 
-            ActionRow actionRow = ActionRow.of(SelectMenu.createStringMenu("menu", "Wybierz kategorie ticketu", 1, 1,
-                    Arrays.asList(
-                            SelectMenuOption.create("Usluga", ticketConfig.uslugaButtonIDMenu, "Chce zakupic usluge.", "\uD83D\uDCB8"),
-                            SelectMenuOption.create("Pomoc", ticketConfig.pomocButtonIDMenu, "Potrzebuje pomocy.", "\uD83D\uDD27"),
-                            SelectMenuOption.create("Partnerstwo", ticketConfig.partnerstwoButtonIDMenu, "Chce zawrzec partnerstwo.", "\uD83E\uDD1D"),
-                            SelectMenuOption.create("Inne", ticketConfig.inneButtonIDMenu, "Inne...", "✨")
-                            )
-            ));
+            if (ticketCategoryManager.getTicketCategories().isEmpty()) {
+                MessageUtility.respondWithEphemeralMessage(event, "```[ ❌ ] Nie znaleziono kategorii ticketow, stworz jakies a pomoca komendy: /ticketcategorycreate!```");
+                return;
+            }
+
+            for (TicketCategory existingCategory : ticketCategoryManager.getTicketCategories()) {
+                SelectMenuOption option = SelectMenuOption.create(existingCategory.getName(), existingCategory.getButtonIDMenu(), existingCategory.getDescription(), EmojiParser.parseToUnicode(existingCategory.getEmoji()));
+                selectMenuBuilder.addOption(option);
+            }
+
+            ActionRow actionRow = ActionRow.of(selectMenuBuilder.build());
 
             EmbedBuilder embed = new EmbedBuilder()
 
@@ -98,6 +105,13 @@ public class TicketCommand extends JavacordCommand {
 
             responder.respond();
         };
+    }
+
+    private SelectMenuBuilder createSelectMenu() {
+        return new SelectMenuBuilder(ComponentType.SELECT_MENU_STRING, "menu")
+                .setPlaceholder("Wybierz kategorie ticketu")
+                .setMinimumValues(1)
+                .setMaximumValues(1);
     }
 
 
