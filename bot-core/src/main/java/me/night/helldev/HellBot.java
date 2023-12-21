@@ -10,9 +10,13 @@ import cc.dreamcode.platform.javacord.serdes.SerdesJavacord;
 import cc.dreamcode.platform.persistence.DreamPersistence;
 import cc.dreamcode.platform.persistence.component.DocumentPersistenceComponentResolver;
 import cc.dreamcode.platform.persistence.component.DocumentRepositoryComponentResolver;
+import me.night.helldev.command.TestCommand;
 import me.night.helldev.command.admin.*;
 import me.night.helldev.command.admin.ticket.TicketCategoryCreateCommand;
 import me.night.helldev.command.admin.ticket.TicketCategoryDeleteCommand;
+import me.night.helldev.command.admin.ticket.TicketCategoryListCommand;
+import me.night.helldev.command.support.CheckWarnsCommand;
+import me.night.helldev.command.support.WarnCommand;
 import me.night.helldev.command.user.DropCommand;
 import me.night.helldev.command.user.ticket.TicketAddUserCommand;
 import me.night.helldev.command.user.ticket.TicketRemoveUserCommand;
@@ -100,6 +104,7 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
         componentManager.registerComponent(TicketManager.class);
         componentManager.registerComponent(TicketCategoryCreateCommand.class);
         componentManager.registerComponent(TicketCategoryDeleteCommand.class);
+        componentManager.registerComponent(TicketCategoryListCommand.class);
         componentManager.registerComponent(TicketHandler.class);
 
         componentManager.registerComponent(TicketAddUserCommand.class);
@@ -113,6 +118,12 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
         componentManager.registerComponent(PollCommand.class);
         componentManager.registerComponent(PollButtonListener.class);
 
+        componentManager.registerComponent(WarnCommand.class);
+        componentManager.registerComponent(SetWarnsCommand.class);
+        componentManager.registerComponent(CheckWarnsCommand.class);
+
+        componentManager.registerComponent(BanCommand.class);
+
         componentManager.registerComponent(PropositionConfig.class);
         componentManager.registerComponent(PropositionManager.class);
         componentManager.registerComponent(PropositionMessageListener.class);
@@ -125,6 +136,8 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
         componentManager.registerComponent(ClearCommand.class);
         componentManager.registerComponent(DropCommand.class);
 
+        //todo: usun
+        componentManager.registerComponent(TestCommand.class);
     }
 
     @Override

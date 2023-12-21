@@ -42,4 +42,10 @@ public class BotConfig extends OkaeriConfig {
     @Comment("welcome channel id")
     public String welcomeChannelId = "1128265476557000855";
 
+    @Comment("Amount of warns to ban user")
+    public int maxWarns = 3;
+
+    @Comment("Member amount channel (Voice Channels only)")
+    public String memberCount = "1185974453218316359";
+
 }
