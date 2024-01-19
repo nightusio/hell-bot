@@ -13,7 +13,7 @@ public class PropositionManager {
 
     public Proposition createProposition() {
         int newPropositionId = generateUniquePropositionId();
-        Proposition proposition = new Proposition(newPropositionId, 0L, 0L, 0, 0, new HashSet<>());
+        Proposition proposition = new Proposition(newPropositionId, 0L, 0L, 0, 0);
 
         propositionConfig.propositions.add(proposition);
         propositionConfig.save();

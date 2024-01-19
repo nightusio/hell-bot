@@ -1,4 +1,4 @@
-package me.night.helldev.listener.poll;
+package me.night.helldev.functionality.poll.listener;
 
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;

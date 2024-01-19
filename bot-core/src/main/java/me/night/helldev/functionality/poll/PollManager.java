@@ -13,7 +13,7 @@ public class PollManager {
 
     public Poll createPoll() {
         int newPollId = generateUniquePollId();
-        Poll poll = new Poll(newPollId, 0L, 0L, 0, 0, new HashSet<>());
+        Poll poll = new Poll(newPollId, 0L, 0L, 0, 0);
         pollConfig.polls.add(poll);
         pollConfig.save();
         return poll;

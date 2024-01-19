@@ -28,8 +28,8 @@ public class ButtonEditUtility {
 
             if (message != null) {
 
-                CustomEmoji tak = api.getCustomEmojiById("1169382281929031720").orElse(null);
-                CustomEmoji nie = api.getCustomEmojiById("1169382274165379103").orElse(null);
+                CustomEmoji tak = api.getCustomEmojiById("1196786062182338611").orElse(null);
+                CustomEmoji nie = api.getCustomEmojiById("1196786067081281627").orElse(null);
 
                 Button yesButton = Button.success("pollyes-" + poll.getId(), ": " + poll.getVotesYes(), tak);
                 Button noButton = Button.danger("pollno-" + poll.getId(), ": " + poll.getVotesNo(), nie);
@@ -56,8 +56,8 @@ public class ButtonEditUtility {
 
             if (message != null) {
 
-                CustomEmoji tak = api.getCustomEmojiById("1169382281929031720").orElse(null);
-                CustomEmoji nie = api.getCustomEmojiById("1169382274165379103").orElse(null);
+                CustomEmoji tak = api.getCustomEmojiById("1196786062182338611").orElse(null);
+                CustomEmoji nie = api.getCustomEmojiById("1196786067081281627").orElse(null);
 
                 Button yesButton = Button.success("propositionyes-" + proposition.getId(), ": " + proposition.getVotesYes(), tak);
                 Button noButton = Button.danger("propositionno-" + proposition.getId(), ": " + proposition.getVotesNo(), nie);

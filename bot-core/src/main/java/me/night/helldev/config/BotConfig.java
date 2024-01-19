@@ -27,7 +27,7 @@ public class BotConfig extends OkaeriConfig {
     public List<String> roleIds = Arrays.asList("1169941084001030244");
 
     @Comment("proposition channel id")
-    public String propositionChannelId = "1128341832435245188";
+    public String propositionChannelId = "1196781459038539866";
 
     public List<String> blockedWords = new ArrayList<>(
             Arrays.asList("@everyone", "@here"));
@@ -40,12 +40,19 @@ public class BotConfig extends OkaeriConfig {
 
 
     @Comment("welcome channel id")
-    public String welcomeChannelId = "1128265476557000855";
+    public String welcomeChannelId = "1196781664404242512";
 
     @Comment("Amount of warns to ban user")
     public int maxWarns = 3;
 
     @Comment("Member amount channel (Voice Channels only)")
     public String memberCount = "1185974453218316359";
+
+    public String profileImage = "https://media.discordapp.net/attachments/1128260153834217533/1193633289265742046/helldev-avatar2.png?ex=65b6a720&is=65a43220&hm=3f341d84e9b1f2485c76bdd18da8613041307320bbd3c33294e484ef2d4e6fec&format=webp&quality=lossless&width=671&height=671&";
+    public String upVoteId = "<:like:1196786062182338611>";
+    public String downVoteId = "<:unlike:1196786067081281627>";
+
+    public String upVote = "like";
+    public String downVote = "unlike";
 
 }

@@ -33,4 +33,11 @@ public class MessageUtility {
                 .setFlags(MessageFlag.EPHEMERAL)
                 .respond();
     }
+
+    public void respondWithEphemeralMessage(ButtonClickEvent event, String content) {
+        event.getInteraction().createImmediateResponder()
+                .setContent(content)
+                .setFlags(MessageFlag.EPHEMERAL)
+                .respond();
+    }
 }

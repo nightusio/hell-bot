@@ -1,4 +1,4 @@
-package me.night.helldev.listener.proposition;
+package me.night.helldev.functionality.proposition.listener;
 
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;
@@ -8,7 +8,7 @@ import me.night.helldev.functionality.proposition.PropositionConfig;
 import me.night.helldev.functionality.proposition.PropositionManager;
 import me.night.helldev.functionality.shared.SharedType;
 import me.night.helldev.utility.ButtonEditUtility;
-import org.javacord.api.entity.message.MessageFlag;
+import me.night.helldev.utility.MessageUtility;
 import org.javacord.api.entity.user.User;
 import org.javacord.api.event.interaction.ButtonClickEvent;
 import org.javacord.api.listener.interaction.ButtonClickListener;
@@ -34,13 +34,13 @@ public class PropositionButtonListener implements ButtonClickListener {
             if (sharedType == SharedType.VOTED_SUCCESSFULLY_YES) {
                 propositionConfig.save();
 
-                respondWithEphemeralMessage(event, "Pomyslnie zaglosowales na tak!");
+                MessageUtility.respondWithEphemeralMessage(event, "Pomyslnie zaglosowales na tak!");
                 ButtonEditUtility.editActionRowsProposition(user.getApi(), proposition);
 
             } else if (sharedType == SharedType.VOTED_FAILED) {
-                respondWithEphemeralMessage(event, "Cos poszlo nie tak.");
+                MessageUtility.respondWithEphemeralMessage(event, "Cos poszlo nie tak.");
             } else {
-                respondWithEphemeralMessage(event, "Nie mozesz zaglosowac drugi raz!");
+                MessageUtility.respondWithEphemeralMessage(event, "Nie mozesz zaglosowac drugi raz!");
             }
         }
 
@@ -50,22 +50,16 @@ public class PropositionButtonListener implements ButtonClickListener {
             if (sharedType == SharedType.VOTED_SUCCESSFULLY_NO) {
                 propositionConfig.save();
 
-                respondWithEphemeralMessage(event, "Pomyslnie zaglosowales na nie!");
+                MessageUtility.respondWithEphemeralMessage(event, "Pomyslnie zaglosowales na nie!");
                 ButtonEditUtility.editActionRowsProposition(user.getApi(), proposition);
 
             } else if (sharedType == SharedType.VOTED_FAILED) {
-                respondWithEphemeralMessage(event, "Cos poszlo nie tak.");
+                MessageUtility.respondWithEphemeralMessage(event, "Cos poszlo nie tak.");
             } else if (sharedType == SharedType.ALREADY_VOTED) {
-                respondWithEphemeralMessage(event, "Nie mozesz zaglosowac drugi raz!");
+                MessageUtility.respondWithEphemeralMessage(event, "Nie mozesz zaglosowac drugi raz!");
             }
         }
     }
 
-    private void respondWithEphemeralMessage(ButtonClickEvent event, String content) {
-        event.getInteraction().createImmediateResponder()
-                .setContent(content)
-                .setFlags(MessageFlag.EPHEMERAL)
-                .respond();
-    }
 
 }

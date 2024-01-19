@@ -5,7 +5,9 @@ import lombok.Getter;
 import me.night.helldev.functionality.shared.SharedType;
 import org.javacord.api.entity.user.User;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -17,15 +19,14 @@ public class Poll {
     private long textChannel;
     private int votesYes;
     private int votesNo;
-    private Set<Long> votedUsers;
+    private List<Long> votedUsers = new ArrayList<>();
 
-    public Poll(int id, long messageId, long textChannel, int votesYes, int votesNo, Set<Long> votedUsers) {
+    public Poll(int id, long messageId, long textChannel, int votesYes, int votesNo) {
         this.id = id;
         this.messageId = messageId;
         this.textChannel = textChannel;
         this.votesYes = votesYes;
         this.votesNo = votesNo;
-        this.votedUsers = votedUsers;
     }
 
 

@@ -30,22 +30,17 @@ public class PollSerdes implements ObjectSerializer<Poll> {
 
     @Override
     public Poll deserialize(@NonNull DeserializationData data, @NonNull GenericsDeclaration generics) {
-        return new Poll(
+        Poll poll = new Poll(
                 data.get("id", int.class),
                 data.get("messageId", long.class),
                 data.get("textChannel", long.class),
                 data.get("votesYes", int.class),
-                data.get("votesNo", int.class),
-                toSet(data.get("votedUsers", List.class))
+                data.get("votesNo", int.class)
         );
+        poll.setVotedUsers(data.getAsList("votedUsers", Long.class));
+        return poll;
     }
 
-    @SuppressWarnings("unchecked")
-    private Set<Long> toSet(Object object) {
-        if (object instanceof List) {
-            return new HashSet<>((List<Long>) object);
-        }
-        throw new IllegalArgumentException("Expected List<Long> for votedUsers");
-    }
+
 
 }

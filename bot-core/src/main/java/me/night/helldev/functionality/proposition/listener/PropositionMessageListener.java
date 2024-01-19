@@ -1,4 +1,4 @@
-package me.night.helldev.listener.proposition;
+package me.night.helldev.functionality.proposition.listener;
 
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;
@@ -61,21 +61,21 @@ public class PropositionMessageListener implements MessageCreateListener {
         Proposition proposition = propositionManager.createProposition();
 
         EmbedBuilder embed = new EmbedBuilder()
-                .setAuthor("HellDev.pl - Propozycja", String.valueOf(event.getApi().getYourself().getAvatar().getUrl()), event.getApi().getYourself().getAvatar())
+                .setAuthor("•  HELLDEV.PL - Twój serwer code!", String.valueOf(event.getApi().getYourself().getAvatar().getUrl()), event.getApi().getYourself().getAvatar())
                 .setThumbnail(user.getAvatar())
                 .setTitle("Propozycja uzytkownika: **" + user.getName() + "**")
                 .setDescription("→ **" + originalMessage.getContent() + "** \n")
                 .addField("", "")
                 .addField("", "Zaznacz poniżej:")
                 .addField("", "")
-                .addField("→ <:tak:1169382281929031720> - Tak/Jestem za!", "**→ <:nie:1169382274165379103> - Nie/Nie jestem za.**")
-                .setFooter("© 2023 HellDev.pl | " + proposition.getId(), event.getApi().getYourself().getAvatar())
-                .setImage("https://cdn.discordapp.com/attachments/1166458384426483764/1171555807368855662/helldev-propozycje.png?ex=655d1b5e&is=654aa65e&hm=96b90e71d462c919791642514bdf2c5d00e4c240a16e2424fb1e6400e305d298&")
+                .addField("→ " + botConfig.upVoteId + " - Tak/Jestem za!", "**→ " + botConfig.downVoteId + " - Nie/Nie jestem za.**")
+                .setFooter("© 2024 HELLDEV.PL", event.getApi().getYourself().getAvatar())
+                .setImage("https://cdn.discordapp.com/attachments/1195848786279411829/1196791078381162496/helldev-propozycje.png?ex=65b8e98c&is=65a6748c&hm=35ac2206c3c1edc64fbe03e671e24ddcb53d31d9ba35fb1991aa919ed5816d52&")
                 .setColor(Color.RED)
                 .setTimestampToNow();
 
-        CustomEmoji tak = event.getApi().getCustomEmojiById("1169382281929031720").orElse(null);
-        CustomEmoji nie = event.getApi().getCustomEmojiById("1169382274165379103").orElse(null);
+        CustomEmoji tak = event.getApi().getCustomEmojiById("1196786062182338611").orElse(null);
+        CustomEmoji nie = event.getApi().getCustomEmojiById("1196786067081281627").orElse(null);
 
         org.javacord.api.entity.message.component.Button yesButton = org.javacord.api.entity.message.component.Button.success("propositionyes-"+ proposition.getId(), ": 0", tak);
         org.javacord.api.entity.message.component.Button noButton = Button.danger("propositionno-"+ proposition.getId(), ": 0", nie);

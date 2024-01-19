@@ -1,10 +1,11 @@
-package me.night.helldev.command.admin;
+package me.night.helldev.functionality.poll.command;
 
 import cc.dreamcode.platform.javacord.component.command.JavacordCommand;
 import cc.dreamcode.utilities.builder.MapBuilder;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.NonNull;
 import me.night.helldev.HellBot;
+import me.night.helldev.config.BotConfig;
 import me.night.helldev.config.MessageConfig;
 import me.night.helldev.functionality.poll.Poll;
 import me.night.helldev.functionality.poll.PollManager;
@@ -32,14 +33,16 @@ public class PollCommand extends JavacordCommand {
     private final MessageConfig messageConfig;
     private final PollManager pollManager;
     private final HellBot hellBot;
+    private final BotConfig botConfig;
 
     @Inject
-    public PollCommand(final MessageConfig messageConfig, final PollManager pollManager, final HellBot hellBot) {
+    public PollCommand(final MessageConfig messageConfig, final PollManager pollManager, final HellBot hellBot, BotConfig botConfig) {
         super("poll", "Creates custom poll");
 
         this.messageConfig = messageConfig;
         this.pollManager = pollManager;
         this.hellBot = hellBot;
+        this.botConfig = botConfig;
 
         this.getSlashCommandBuilder().setDefaultEnabledForPermissions(PermissionType.ADMINISTRATOR);
 
@@ -67,15 +70,15 @@ public class PollCommand extends JavacordCommand {
                     .setTitle("Treść Ankiety:")
                     .setDescription("→ **" + message + "** \n")
                     .addField("", "Możliwe odpowiedzi do zaznaczenia:")
-                    .addField("→ <:tak:1169382281929031720> - Tak/Jestem za!", "**→ <:nie:1169382274165379103> - Nie/Nie jestem za.**")
-                    .setFooter("© 2023 HellDev | " + poll.getId())
-                    .setImage("https://cdn.discordapp.com/attachments/1166458384426483764/1171555805233959013/helldev-ankieta.png?ex=655d1b5e&is=654aa65e&hm=88e8903fc131fd8df4c871069edfcabe261f3a6894b106e1b33a430d3ce5d59e&")
-                    .setAuthor("HellDev - Ankieta", "", interaction.getApi().getYourself().getAvatar())
-                    .setColor(Color.GREEN)
+                    .addField("→ " + botConfig.upVoteId + " - Tak/Jestem za!", "**→ " + botConfig.downVoteId + " - Nie/Nie jestem za.**")
+                    .setFooter("© 2024 HELLDEV.PL")
+                    .setImage("https://cdn.discordapp.com/attachments/1195848786279411829/1196785430658547762/helldev-ankieta.png?ex=65b8e449&is=65a66f49&hm=78f8b62c6b8b2d3773ea38eebb9d48bf2c5f405fd5bca7825b0525e440c908ce&")
+                    .setAuthor("•  HELLDEV.PL - Twój serwer code!", "", interaction.getApi().getYourself().getAvatar())
+                    .setColor(new Color(220, 3, 48))
                     .setTimestampToNow();
 
-            CustomEmoji tak = hellBot.getDiscordApi().getCustomEmojiById("1169382281929031720").orElse(null);
-            CustomEmoji nie = hellBot.getDiscordApi().getCustomEmojiById("1169382274165379103").orElse(null);
+            CustomEmoji tak = hellBot.getDiscordApi().getCustomEmojiById("1196786062182338611").orElse(null);
+            CustomEmoji nie = hellBot.getDiscordApi().getCustomEmojiById("1196786067081281627").orElse(null);
 
             Button yesButton = Button.success("pollyes-"+ poll.getId(), ": 0", tak);
             Button noButton = Button.danger("pollno-"+ poll.getId(), ": 0", nie);

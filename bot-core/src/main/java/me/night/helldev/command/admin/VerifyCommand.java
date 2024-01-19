@@ -63,14 +63,12 @@ public class VerifyCommand extends JavacordCommand {
             Icon icon = interaction.getApi().getYourself().getAvatar();
 
             EmbedBuilder embed = new EmbedBuilder()
-                    .setDescription("``` " +
-                            "      ✅ × HellDev.pl - Zweryfikuj się! ```\n" +
-                            "> **Witaj, zweryfikuj się, aby otrzymać dostęp do wszystkich kanałów. Weryfikując się, akceptujesz regulamin.**\n" +
-                            "\n" +
-                            "> Nie zapomnij przywitać się z użytkownikami.")
-                    .setImage("https://cdn.discordapp.com/attachments/1166458384426483764/1171815155139608666/helldev-weryfikacja.png?ex=655e0ce8&is=654b97e8&hm=f33ac4b298cb17faa0023b550d35a8cc5a3f87f17b19c40ac6aafc46a168785b&")
-                    .setAuthor("HellDev - Weryfikacja", "", icon)
-                    .setFooter("© 2023 helldev.pl", icon)
+                    .setDescription(
+                            "- **Witaj, zweryfikuj się, aby otrzymać dostęp do wszystkich kanałów. Weryfikując się, akceptujesz regulamin.**\n" +
+                            "- Nie zapomnij przywitać się z innymi użytkownikami.")
+                    .setImage("https://cdn.discordapp.com/attachments/1193569983377195008/1196799942593892384/helldev-weryfikacja.png?ex=65b8f1cd&is=65a67ccd&hm=6381c05968604c5bf8535c0d1cc192d1b6d8dadaa0f1d6334441204a11d5c200&")
+                    .setAuthor("•  HELLDEV.PL - Twój serwer code!", "", icon)
+                    .setFooter("© 2024 HELLDEV.PL", icon)
                     .setColor(Color.RED)
                     .setTimestampToNow();
 

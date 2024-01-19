@@ -3,11 +3,7 @@ package me.night.helldev.command.admin;
 import cc.dreamcode.platform.javacord.component.command.JavacordCommand;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.NonNull;
-import me.night.helldev.config.BotConfig;
-import me.night.helldev.member.Member;
-import me.night.helldev.member.MemberRepository;
 import me.night.helldev.utility.RoleUtility;
-import org.javacord.api.entity.Icon;
 import org.javacord.api.entity.channel.TextChannel;
 import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.message.embed.EmbedBuilder;
@@ -22,6 +18,7 @@ import org.javacord.api.interaction.callback.InteractionImmediateResponseBuilder
 import org.javacord.api.listener.interaction.SlashCommandCreateListener;
 
 import java.awt.*;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -29,14 +26,9 @@ import java.util.Optional;
 
 public class BanCommand  extends JavacordCommand {
 
-    private final MemberRepository memberRepository;
-    private final BotConfig botConfig;
-
     @Inject
-    public BanCommand(MemberRepository memberRepository, BotConfig botConfig) {
+    public BanCommand() {
         super("ban", "Bans user");
-        this.memberRepository = memberRepository;
-        this.botConfig = botConfig;
 
         this.getSlashCommandBuilder().setDefaultEnabledForPermissions(PermissionType.BAN_MEMBERS);
 
@@ -63,55 +55,52 @@ public class BanCommand  extends JavacordCommand {
             if (optionalChannel.isEmpty()) return;
             TextChannel channel = optionalChannel.get();
 
-            User warnedUser = interaction.getArgumentByIndex(0)
+            User bannedUser = interaction.getArgumentByIndex(0)
                     .flatMap(SlashCommandInteractionOption::getUserValue)
                     .orElse(null);
 
-            String warnDescription = interaction.getArgumentByIndex(1)
+            String banDescription = interaction.getArgumentByIndex(1)
                     .flatMap(SlashCommandInteractionOption::getStringValue)
                     .orElse(null);
 
-            if (warnedUser == null) return;
-            if (warnDescription == null) return;
+            if (bannedUser == null) return;
+            if (banDescription == null) return;
 
-            User warningUser = interaction.getUser();
+            User banningUser = interaction.getUser();
 
-            if (!RoleUtility.hasHigherRole(warningUser, warnedUser, server)) {
+            if (!RoleUtility.hasHigherRole(banningUser, bannedUser, server)) {
                 responder.setContent("Nie mozesz zbanowac tej osoby!")
                         .setFlags(MessageFlag.EPHEMERAL)
                         .respond();
                 return;
             }
 
-            Member member = memberRepository.findOrCreate(warnedUser);
-
-            member.getBans().add(warnDescription);
-            member.save();
-
-            Icon icon = interaction.getApi().getYourself().getAvatar();
-
-            EmbedBuilder warnEmbed = new EmbedBuilder()
-                    .setDescription("``` " +
-                            "     ⚠️ × HellDev.pl - Warn! ```\n" +
-                            "> **Uzytkownik " + warnedUser.getMentionTag() + " zostal ostrzezony!.**\n" +
-                            "> **Powod: " + warnDescription +  " .**\n" +
-                            "> **Jest to " + member.getWarns().size() + " ostrzezenie.**" +
-                            "\n")
-                    .setAuthor("HellDev - Warn", "", icon)
-                    .setFooter("© 2023 helldev.pl", icon)
+            EmbedBuilder banDmEmbed = new EmbedBuilder()
+                    .setTitle("ZOSTAŁEŚ ZBANOWANY")
+                    .setDescription("<:uzytkownik2:1173638447479664710> Użytkownik " + banningUser.getMentionTag() +" zbanował Cię!\n" +
+                            "<:message:1196801672224186438> Powód bana: " + banDescription)
+                    .setFooter("© 2024 HELLDEV.PL", interaction.getApi().getYourself().getAvatar())
+                    .setAuthor("•  HELLDEV.PL - Moderacja", "", interaction.getApi().getYourself().getAvatar())
                     .setColor(Color.RED)
                     .setTimestampToNow();
 
+            bannedUser.sendMessage(banDmEmbed);
 
-            if (member.getWarns().size() >= botConfig.maxWarns) {
-                server.banUser(warnedUser);
-            }
+            EmbedBuilder banChatEmbed = new EmbedBuilder()
+                    .setDescription("<:uzytkownik2:1173638447479664710> Administrator: " + banningUser.getMentionTag() + "\n" +
+                            "<:wave:1196801756781350994> Użytkownik: " + bannedUser.getMentionTag() + "\n"
+                            + "\n" +
+                            "<:message:1196801672224186438> Powód bana: " + banDescription + "\n" +
+                            "<:clock:1196802606987743292> Czas bana: na zawsze"
+                    )
+                    .setFooter("© 2024 HELLDEV.PL", interaction.getApi().getYourself().getAvatar())
+                    .setAuthor("•  HELLDEV.PL - Twój serwer code!", "", interaction.getApi().getYourself().getAvatar())
+                    .setColor(Color.RED)
+                    .setTimestampToNow();
 
-            channel.sendMessage(warnEmbed);
+            channel.sendMessage(banChatEmbed);
 
-            responder.setFlags(MessageFlag.EPHEMERAL);
-            interaction.createImmediateResponder().setContent("Uzytkownik " + warnedUser.getMentionTag() + " zostal pomyslnie ostrzezony!").respond();
-
+            server.banUser(bannedUser);
 
             responder.respond();
         };
