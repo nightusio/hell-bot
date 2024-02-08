@@ -10,7 +10,7 @@ public class PropositionManager {
 
     public Proposition createProposition() {
         int newPropositionId = generateUniquePropositionId();
-        Proposition proposition = new Proposition(newPropositionId, 0L, 0L, 0, 0);
+        Proposition proposition = new Proposition(newPropositionId);
         propositionConfig.propositions.add(proposition);
         return proposition;
     }

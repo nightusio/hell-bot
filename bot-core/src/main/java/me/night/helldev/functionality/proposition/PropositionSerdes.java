@@ -30,12 +30,12 @@ public class PropositionSerdes implements ObjectSerializer<Proposition> {
     @Override
     public Proposition deserialize(@NonNull DeserializationData data, @NonNull GenericsDeclaration generics) {
         Proposition proposition = new Proposition(
-                data.get("id", int.class),
-                data.get("messageId", long.class),
-                data.get("textChannel", long.class),
-                data.get("votesYes", int.class),
-                data.get("votesNo", int.class)
+                data.get("id", int.class)
         );
+        proposition.setMessageId(data.get("messageId", long.class));
+        proposition.setTextChannel(data.get("textChannel", long.class));
+        proposition.setVotesYes(data.get("votesYes", int.class));
+        proposition.setVotesNo(data.get("votesNo", int.class));
         proposition.setVotedUsers(data.getAsList("votedUsers", Long.class));
         return proposition;
     }

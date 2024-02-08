@@ -24,7 +24,7 @@ public class PollSerdes implements ObjectSerializer<Poll> {
         data.add("textChannel", object.getTextChannel());
         data.add("votesYes", object.getVotesYes());
         data.add("votesNo", object.getVotesNo());
-        data.add("votedUsers", object.getVotedUsers());
+        data.add("votedUsers", object.getVotedUsers(), Long.class);
 
     }
 
