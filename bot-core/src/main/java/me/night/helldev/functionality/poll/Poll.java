@@ -17,22 +17,15 @@ import java.util.Set;
 public class Poll {
 
     private int id;
-    private long messageId;
-    private long textChannel;
-    private int votesYes;
-    private int votesNo;
+    private long messageId = 0L;
+    private long textChannel = 0L;
+    private int votesYes = 0;
+    private int votesNo = 0;
     private List<Long> votedUsers = new ArrayList<>();
 
-    public Poll(int id, long messageId, long textChannel, int votesYes, int votesNo) {
+    public Poll(int id) {
         this.id = id;
-        this.messageId = messageId;
-        this.textChannel = textChannel;
-        this.votesYes = votesYes;
-        this.votesNo = votesNo;
     }
-
-
-
 
     private void updateVotes(boolean voteYes) {
         if (voteYes) {

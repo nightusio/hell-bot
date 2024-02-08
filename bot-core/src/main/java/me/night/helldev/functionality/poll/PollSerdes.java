@@ -31,12 +31,12 @@ public class PollSerdes implements ObjectSerializer<Poll> {
     @Override
     public Poll deserialize(@NonNull DeserializationData data, @NonNull GenericsDeclaration generics) {
         Poll poll = new Poll(
-                data.get("id", int.class),
-                data.get("messageId", long.class),
-                data.get("textChannel", long.class),
-                data.get("votesYes", int.class),
-                data.get("votesNo", int.class)
+                data.get("id", int.class)
         );
+        poll.setMessageId(data.get("messageId", long.class));
+        poll.setTextChannel(data.get("textChannel", long.class));
+        poll.setVotesYes(data.get("votesYes", int.class));
+        poll.setVotesNo(data.get("votesNo", int.class));
         poll.setVotedUsers(data.getAsList("votedUsers", Long.class));
         return poll;
     }

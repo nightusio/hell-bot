@@ -3,7 +3,6 @@ package me.night.helldev.functionality.poll;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;
 
-import java.util.HashSet;
 import java.util.Optional;
 
 @RequiredArgsConstructor(onConstructor_ = @Inject)
@@ -13,12 +12,10 @@ public class PollManager {
 
     public Poll createPoll() {
         int newPollId = generateUniquePollId();
-        Poll poll = new Poll(newPollId, 0L, 0L, 0, 0);
-        pollConfig.polls.add(poll);
+        Poll poll = new Poll(newPollId);
         pollConfig.save();
         return poll;
     }
-
 
     public void setMessageId(Poll poll, long messageId) {
         poll.setMessageId(messageId);
@@ -31,24 +28,30 @@ public class PollManager {
     }
 
     public Poll getPollById(String pollIdStr) {
+        int pollId = extractPollId(pollIdStr);
+        return pollId != -1 ? findPollById(pollId) : null;
+    }
+
+    private Poll findPollById(int pollId) {
+        return pollConfig.polls.stream()
+                .filter(p -> p.getId() == pollId)
+                .findFirst()
+                .orElse(null);
+    }
+
+    private int extractPollId(String pollIdStr) {
         String cleanedPropositionIdStr = pollIdStr.replaceAll("pollyes-|pollno-|pollcheck-", "");
         try {
-            int pollId = Integer.parseInt(cleanedPropositionIdStr);
-            Optional<Poll> foundPoll = pollConfig.polls.stream().filter(p -> p.getId() == pollId).findFirst();
-            return foundPoll.orElse(null);
+            return Integer.parseInt(cleanedPropositionIdStr);
         } catch (NumberFormatException ignored) {
-            return null;
+            return -1;
         }
     }
 
     private int generateUniquePollId() {
-        int maxId = 0;
-        for (Poll existingPolls : pollConfig.polls) {
-            if (existingPolls.getId() > maxId) {
-                maxId = existingPolls.getId();
-            }
-        }
-        return maxId + 1;
+        return pollConfig.polls.stream()
+                .mapToInt(Poll::getId)
+                .max()
+                .orElse(0) + 1;
     }
-
 }

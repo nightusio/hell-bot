@@ -21,28 +21,32 @@ public class PropositionButtonListener implements ButtonClickListener {
     @Override
     public void onButtonClick(ButtonClickEvent event) {
         User user = event.getInteraction().getUser();
-        Proposition proposition = propositionManager.getPropositionById(event.getButtonInteraction().getCustomId());
+        String customId = event.getButtonInteraction().getCustomId();
+        Proposition proposition = propositionManager.getPropositionById(customId);
 
         if (proposition == null) return;
 
-        if (event.getButtonInteraction().getCustomId().startsWith("propositionyes-")) {
-            SharedType sharedType = proposition.addVote(user, true);
-            handleVoteResult(event, user, proposition, sharedType);
-        } else if (event.getButtonInteraction().getCustomId().startsWith("propositionno-")) {
-            SharedType sharedType = proposition.addVote(user, false);
-            handleVoteResult(event, user, proposition, sharedType);
-        }
+        SharedType sharedType = customId.startsWith("propositionyes-") ?
+                proposition.addVote(user, true) :
+                proposition.addVote(user, false);
+
+        handleVoteResult(event, user, proposition, sharedType);
     }
 
     private void handleVoteResult(ButtonClickEvent event, User user, Proposition proposition, SharedType sharedType) {
-        if (sharedType == SharedType.VOTED_SUCCESSFULLY_YES || sharedType == SharedType.VOTED_SUCCESSFULLY_NO) {
-            MessageUtility.respondWithEphemeralMessage(event, "Pomyślnie zagłosowałeś!");
-            ButtonEditUtility.editActionRowsProposition(user.getApi(), proposition);
-            propositionConfig.save();
-        } else if (sharedType == SharedType.VOTED_FAILED) {
-            MessageUtility.respondWithEphemeralMessage(event, "Coś poszło nie tak.");
-        } else {
-            MessageUtility.respondWithEphemeralMessage(event, "Nie możesz zagłosować drugi raz!");
+        switch (sharedType) {
+            case VOTED_SUCCESSFULLY_YES:
+            case VOTED_SUCCESSFULLY_NO:
+                MessageUtility.respondWithEphemeralMessage(event, "Pomyślnie zagłosowałeś!");
+                ButtonEditUtility.editActionRowsProposition(user.getApi(), proposition);
+                propositionConfig.save();
+                break;
+            case VOTED_FAILED:
+                MessageUtility.respondWithEphemeralMessage(event, "Coś poszło nie tak.");
+                break;
+            case ALREADY_VOTED:
+                MessageUtility.respondWithEphemeralMessage(event, "Nie możesz zagłosować drugi raz!");
+                break;
         }
     }
 }

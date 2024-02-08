@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import me.night.helldev.functionality.poll.Poll;
 import me.night.helldev.functionality.poll.PollConfig;
 import me.night.helldev.functionality.poll.PollManager;
-
 import me.night.helldev.functionality.shared.SharedType;
 import me.night.helldev.utility.ButtonEditUtility;
 import org.javacord.api.entity.message.MessageFlag;
@@ -22,41 +21,36 @@ public class PollButtonListener implements ButtonClickListener {
     @Override
     public void onButtonClick(ButtonClickEvent event) {
         User user = event.getInteraction().getUser();
-        Poll poll = pollManager.getPollById(event.getButtonInteraction().getCustomId());
+        String customId = event.getButtonInteraction().getCustomId();
+        Poll poll = pollManager.getPollById(customId);
 
         if (poll == null) return;
 
-        if (event.getButtonInteraction().getCustomId().contains("pollyes-" + poll.getId())) {
-            SharedType sharedType = poll.addVote(user, true);
+        SharedType sharedType = customId.contains("pollyes-" + poll.getId()) ?
+                poll.addVote(user, true) :
+                poll.addVote(user, false);
 
-            if (sharedType == SharedType.VOTED_SUCCESSFULLY_YES) {
-                pollConfig.save();
-
-                respondWithEphemeralMessage(event, "Pomyslnie zaglosowales na tak!");
-                ButtonEditUtility.editActionRowsPoll(user.getApi(), poll);
-
-            } else if (sharedType == SharedType.VOTED_FAILED) {
-                respondWithEphemeralMessage(event, "Cos poszlo nie tak.");
-            } else {
-                respondWithEphemeralMessage(event, "Nie mozesz zaglosowac drugi raz!");
-            }
+        String responseMessage;
+        switch (sharedType) {
+            case VOTED_SUCCESSFULLY_YES:
+                responseMessage = "Pomyślnie zagłosowałeś na tak!";
+                break;
+            case VOTED_SUCCESSFULLY_NO:
+                responseMessage = "Pomyślnie zagłosowałeś na nie!";
+                break;
+            case VOTED_FAILED:
+                responseMessage = "Coś poszło nie tak.";
+                break;
+            case ALREADY_VOTED:
+                responseMessage = "Nie możesz zagłosować drugi raz!";
+                break;
+            default:
+                responseMessage = "";
         }
 
-        if (event.getButtonInteraction().getCustomId().equals("pollno-" + poll.getId())) {
-            SharedType sharedType = poll.addVote(user, false);
-
-            if (sharedType == SharedType.VOTED_SUCCESSFULLY_NO) {
-                pollConfig.save();
-
-                respondWithEphemeralMessage(event, "Pomyslnie zaglosowales na nie!");
-                ButtonEditUtility.editActionRowsPoll(user.getApi(), poll);
-
-            } else if (sharedType == SharedType.VOTED_FAILED) {
-                respondWithEphemeralMessage(event, "Cos poszlo nie tak.");
-            } else if (sharedType == SharedType.ALREADY_VOTED) {
-                respondWithEphemeralMessage(event, "Nie mozesz zaglosowac drugi raz!");
-            }
-        }
+        pollConfig.save();
+        respondWithEphemeralMessage(event, responseMessage);
+        ButtonEditUtility.editActionRowsPoll(user.getApi(), poll);
     }
 
     private void respondWithEphemeralMessage(ButtonClickEvent event, String content) {
@@ -65,5 +59,4 @@ public class PollButtonListener implements ButtonClickListener {
                 .setFlags(MessageFlag.EPHEMERAL)
                 .respond();
     }
-
 }
