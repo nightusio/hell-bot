@@ -19,6 +19,7 @@ import org.javacord.api.event.message.MessageCreateEvent;
 import org.javacord.api.listener.message.MessageCreateListener;
 
 import java.awt.*;
+import java.time.Duration;
 import java.util.Optional;
 
 @RequiredArgsConstructor(onConstructor_ = @Inject)
@@ -33,38 +34,31 @@ public class PropositionMessageListener implements MessageCreateListener {
     public void onMessageCreate(MessageCreateEvent event) {
         TextChannel textChannel = event.getChannel();
         Optional<User> optionalUser = event.getMessage().getUserAuthor();
-        Message originalMessage = event.getMessage();
 
-        long textChannelId = textChannel.getId();
-
-        if (!(textChannelId == Long.parseLong(botConfig.propositionChannelId))) {
+        if (textChannel.getId() != Long.parseLong(botConfig.propositionChannelId) || !optionalUser.isPresent() || optionalUser.get().isBot())
             return;
-        }
-
-        if (optionalUser.isEmpty()) {
-            return;
-        }
 
         User user = optionalUser.get();
 
-        if (user.isBot()) {
-            return;
-        }
-
-        originalMessage.delete();
-
-        if (botConfig.blockedWords.stream().anyMatch(blockedWord -> originalMessage.getContent().contains(blockedWord))) {
+        if (botConfig.blockedWords.stream().anyMatch(blockedWord -> event.getMessage().getContent().contains(blockedWord))) {
             user.openPrivateChannel().thenAccept(privateChannel -> messageConfig.propositionNotSend.send(privateChannel));
             return;
         }
 
         Proposition proposition = propositionManager.createProposition();
+        propositionConfig.save();
+
+        createPropositionMessage(event, user, proposition);
+    }
+
+    private void createPropositionMessage(MessageCreateEvent event, User user, Proposition proposition) {
+        TextChannel textChannel = event.getChannel();
 
         EmbedBuilder embed = new EmbedBuilder()
-                .setAuthor("•  HELLDEV.PL - Twój serwer code!", String.valueOf(event.getApi().getYourself().getAvatar().getUrl()), event.getApi().getYourself().getAvatar())
+                .setAuthor("• HELLDEV.PL - Twój serwer code!", String.valueOf(event.getApi().getYourself().getAvatar().getUrl()), event.getApi().getYourself().getAvatar())
                 .setThumbnail(user.getAvatar())
-                .setTitle("Propozycja uzytkownika: **" + user.getName() + "**")
-                .setDescription("→ **" + originalMessage.getContent() + "** \n")
+                .setTitle("Propozycja użytkownika: " + user.getName())
+                .setDescription("→ **" + event.getMessage().getContent() + "** \n")
                 .addField("", "")
                 .addField("", "Zaznacz poniżej:")
                 .addField("", "")
@@ -77,16 +71,19 @@ public class PropositionMessageListener implements MessageCreateListener {
         CustomEmoji tak = event.getApi().getCustomEmojiById("1196786062182338611").orElse(null);
         CustomEmoji nie = event.getApi().getCustomEmojiById("1196786067081281627").orElse(null);
 
-        org.javacord.api.entity.message.component.Button yesButton = org.javacord.api.entity.message.component.Button.success("propositionyes-"+ proposition.getId(), ": 0", tak);
-        org.javacord.api.entity.message.component.Button noButton = Button.danger("propositionno-"+ proposition.getId(), ": 0", nie);
+        Button yesButton = Button.success("propositionyes-" + proposition.getId(), ": 0", tak);
+        Button noButton = Button.danger("propositionno-" + proposition.getId(), ": 0", nie);
 
         ActionRow actionRow = ActionRow.of(yesButton, noButton);
 
-        Message propositionMessage = textChannel.asTextChannel().get().sendMessage(embed, actionRow).join();
-        propositionManager.setMessageId(proposition, propositionMessage.getId());
-        propositionManager.setTextChannel(proposition, propositionMessage.getChannel().getId());
-        propositionConfig.save();
-        MessageUtility.openDiscussion(propositionMessage, user.getName());
+        Message originMessage = event.getMessage();
 
+        textChannel.sendMessage(embed, actionRow)
+                .thenAccept(message -> {
+                    originMessage.deleteAfter(Duration.ofSeconds(1));
+                    propositionManager.setMessageId(proposition, message.getId());
+                    propositionManager.setTextChannel(proposition, message.getChannel().getId());
+                    MessageUtility.openDiscussion(message, user.getName());
+                });
     }
 }

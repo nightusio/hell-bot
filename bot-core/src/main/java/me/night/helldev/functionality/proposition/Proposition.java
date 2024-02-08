@@ -2,6 +2,7 @@ package me.night.helldev.functionality.proposition;
 
 import lombok.Data;
 import lombok.Getter;
+import me.night.helldev.functionality.crash.CrashManager;
 import me.night.helldev.functionality.shared.SharedType;
 import org.javacord.api.entity.user.User;
 
@@ -46,6 +47,7 @@ public class Proposition {
             votedUsers.add(user.getId());
             return voteYes ? SharedType.VOTED_SUCCESSFULLY_YES : SharedType.VOTED_SUCCESSFULLY_NO;
         } catch (Exception exception) {
+            CrashManager.sendCrashMessage(exception.getCause().getMessage());
             return SharedType.VOTED_FAILED;
         }
     }

@@ -10,6 +10,7 @@ import cc.dreamcode.platform.javacord.serdes.SerdesJavacord;
 import cc.dreamcode.platform.persistence.DreamPersistence;
 import cc.dreamcode.platform.persistence.component.DocumentPersistenceComponentResolver;
 import cc.dreamcode.platform.persistence.component.DocumentRepositoryComponentResolver;
+import lombok.Getter;
 import me.night.helldev.command.TestCommand;
 import me.night.helldev.command.admin.*;
 import me.night.helldev.command.admin.ticket.TicketCategoryCreateCommand;
@@ -21,6 +22,7 @@ import me.night.helldev.command.user.DropCommand;
 import me.night.helldev.command.user.ticket.TicketAddUserCommand;
 import me.night.helldev.command.user.ticket.TicketRemoveUserCommand;
 import me.night.helldev.config.*;
+import me.night.helldev.functionality.crash.CrashManager;
 import me.night.helldev.functionality.poll.PollConfig;
 import me.night.helldev.functionality.poll.command.PollCommand;
 import me.night.helldev.functionality.proposition.PropositionConfig;
@@ -53,6 +55,9 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class HellBot extends DreamJavacordPlatform implements DreamPersistence, DreamJavacordConfig {
 
+    @Getter
+    private static HellBot hellBot;
+
     public static void main(String[] args) {
         DreamJavacordPlatform.run(new HellBot(), args);
     }
@@ -84,6 +89,8 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
 
     @Override
     public void enable(@NonNull ComponentManager componentManager) {
+        hellBot = this;
+
         componentManager.registerComponent(MessageConfig.class);
         componentManager.registerComponent(BotConfig.class, botConfig -> {
             componentManager.setDebug(botConfig.debug);
@@ -143,7 +150,7 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
 
     @Override
     public void disable() {
-
+        hellBot = null;
     }
 
     @Override

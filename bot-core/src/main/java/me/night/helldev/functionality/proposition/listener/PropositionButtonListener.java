@@ -2,7 +2,6 @@ package me.night.helldev.functionality.proposition.listener;
 
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;
-
 import me.night.helldev.functionality.proposition.Proposition;
 import me.night.helldev.functionality.proposition.PropositionConfig;
 import me.night.helldev.functionality.proposition.PropositionManager;
@@ -26,40 +25,24 @@ public class PropositionButtonListener implements ButtonClickListener {
 
         if (proposition == null) return;
 
-        if (event.getButtonInteraction().getCustomId().contains("propositionyes-" + proposition.getId())) {
+        if (event.getButtonInteraction().getCustomId().startsWith("propositionyes-")) {
             SharedType sharedType = proposition.addVote(user, true);
-            propositionConfig.save();
-
-
-            if (sharedType == SharedType.VOTED_SUCCESSFULLY_YES) {
-                propositionConfig.save();
-
-                MessageUtility.respondWithEphemeralMessage(event, "Pomyslnie zaglosowales na tak!");
-                ButtonEditUtility.editActionRowsProposition(user.getApi(), proposition);
-
-            } else if (sharedType == SharedType.VOTED_FAILED) {
-                MessageUtility.respondWithEphemeralMessage(event, "Cos poszlo nie tak.");
-            } else {
-                MessageUtility.respondWithEphemeralMessage(event, "Nie mozesz zaglosowac drugi raz!");
-            }
-        }
-
-        if (event.getButtonInteraction().getCustomId().equals("propositionno-" + proposition.getId())) {
+            handleVoteResult(event, user, proposition, sharedType);
+        } else if (event.getButtonInteraction().getCustomId().startsWith("propositionno-")) {
             SharedType sharedType = proposition.addVote(user, false);
-
-            if (sharedType == SharedType.VOTED_SUCCESSFULLY_NO) {
-                propositionConfig.save();
-
-                MessageUtility.respondWithEphemeralMessage(event, "Pomyslnie zaglosowales na nie!");
-                ButtonEditUtility.editActionRowsProposition(user.getApi(), proposition);
-
-            } else if (sharedType == SharedType.VOTED_FAILED) {
-                MessageUtility.respondWithEphemeralMessage(event, "Cos poszlo nie tak.");
-            } else if (sharedType == SharedType.ALREADY_VOTED) {
-                MessageUtility.respondWithEphemeralMessage(event, "Nie mozesz zaglosowac drugi raz!");
-            }
+            handleVoteResult(event, user, proposition, sharedType);
         }
     }
 
-
+    private void handleVoteResult(ButtonClickEvent event, User user, Proposition proposition, SharedType sharedType) {
+        if (sharedType == SharedType.VOTED_SUCCESSFULLY_YES || sharedType == SharedType.VOTED_SUCCESSFULLY_NO) {
+            MessageUtility.respondWithEphemeralMessage(event, "Pomyślnie zagłosowałeś!");
+            ButtonEditUtility.editActionRowsProposition(user.getApi(), proposition);
+            propositionConfig.save();
+        } else if (sharedType == SharedType.VOTED_FAILED) {
+            MessageUtility.respondWithEphemeralMessage(event, "Coś poszło nie tak.");
+        } else {
+            MessageUtility.respondWithEphemeralMessage(event, "Nie możesz zagłosować drugi raz!");
+        }
+    }
 }

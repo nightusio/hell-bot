@@ -13,7 +13,7 @@ import org.javacord.api.event.interaction.SlashCommandCreateEvent;
 public class MessageUtility {
 
     public void openDiscussion(Message message, String userName) {
-        message.createThread("Dyskusja na temat propozycji uzytkownika: " + userName, AutoArchiveDuration.ONE_WEEK);
+        message.createThread("Dyskusja na temat propozycji użytkownika: " + userName, AutoArchiveDuration.ONE_WEEK);
     }
 
     public Message getMessageInTextChannel(long messageId, TextChannel textChannel) {
