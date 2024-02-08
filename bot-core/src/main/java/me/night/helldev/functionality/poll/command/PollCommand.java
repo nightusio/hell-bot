@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class PollCommand extends JavacordCommand {
 
@@ -37,7 +38,7 @@ public class PollCommand extends JavacordCommand {
 
     @Inject
     public PollCommand(final MessageConfig messageConfig, final PollManager pollManager, final HellBot hellBot, BotConfig botConfig) {
-        super("poll", "Creates custom poll");
+        super("poll", "Creates custom poll.");
 
         this.messageConfig = messageConfig;
         this.pollManager = pollManager;
@@ -49,7 +50,7 @@ public class PollCommand extends JavacordCommand {
         List<SlashCommandOption> optionList = new ArrayList<>(Arrays.asList(
 
                 SlashCommandOption.create(SlashCommandOptionType.STRING, "message", "Message of poll", true),
-                SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "channel", "Channel to send poll to", true)
+                SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "channel", "Channel to send poll to", false)
         ));
 
         this.getSlashCommandBuilder().setOptions(optionList);
@@ -61,11 +62,12 @@ public class PollCommand extends JavacordCommand {
             SlashCommandInteraction interaction = event.getSlashCommandInteraction();
             InteractionImmediateResponseBuilder responder = interaction.createImmediateResponder();
 
-            Channel channel = interaction.getArgumentByIndex(1).get().getChannelValue().get();
-            String message = interaction.getArgumentByIndex(0).get().getStringRepresentationValue().get();
+            String message = interaction.getArgumentByIndex(0).flatMap(SlashCommandInteractionOption::getStringValue).orElse("");
+            Optional<Channel> channelOption = interaction.getArgumentByIndex(1).flatMap(SlashCommandInteractionOption::getChannelValue);
 
             Poll poll = pollManager.createPoll();
 
+            // Build the embed for the poll
             EmbedBuilder embed = new EmbedBuilder()
                     .setTitle("Treść Ankiety:")
                     .setDescription("→ **" + message + "** \n")
@@ -85,21 +87,30 @@ public class PollCommand extends JavacordCommand {
 
             ActionRow actionRow = ActionRow.of(yesButton, noButton);
 
-            Optional<TextChannel> optionalPollChannel = channel.asTextChannel();
+            AtomicReference<Message> pollMessage = new AtomicReference<>();
 
-            if(optionalPollChannel.isEmpty()) return;
+            if (channelOption.isPresent() && channelOption.get() instanceof TextChannel) {
+                TextChannel textChannel = (TextChannel) channelOption.get();
+                pollMessage.set(textChannel.sendMessage(embed, actionRow).join());
 
-            Message pollMessage = optionalPollChannel.get().sendMessage(embed, actionRow).join();
+                pollManager.setMessageId(poll, pollMessage.get().getId());
+                pollManager.setTextChannel(poll, pollMessage.get().getChannel().getId());
+            } else {
+                interaction.getChannel().ifPresent(channel -> {
+                    pollMessage.set(channel.sendMessage(embed, actionRow).join());
+                    pollManager.setMessageId(poll, pollMessage.get().getId());
+                    pollManager.setTextChannel(poll, pollMessage.get().getChannel().getId());
+                });
+            }
 
-            pollManager.setMessageId(poll, pollMessage.getId());
-            pollManager.setTextChannel(poll, pollMessage.getChannel().getId());
-
+            // Set the response flags and send the response
             responder.setFlags(MessageFlag.EPHEMERAL);
             messageConfig.embedCommandSent.applyToResponder(responder, new MapBuilder<String, Object>()
-                    .put("channel", channel.getId())
+                    .put("channel", pollMessage.get().getChannel().getId())
                     .build());
 
             responder.respond();
         };
     }
+
 }
