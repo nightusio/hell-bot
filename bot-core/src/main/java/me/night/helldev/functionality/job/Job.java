@@ -6,5 +6,5 @@ import lombok.Getter;
 @Data
 @Getter
 public class Job {
-
+    //todo rekru
 }
