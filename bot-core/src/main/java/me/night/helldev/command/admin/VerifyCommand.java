@@ -8,6 +8,7 @@ import lombok.NonNull;
 import me.night.helldev.config.MessageConfig;
 import org.javacord.api.entity.Icon;
 import org.javacord.api.entity.channel.Channel;
+import org.javacord.api.entity.channel.ServerChannel;
 import org.javacord.api.entity.channel.TextChannel;
 import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.message.component.ActionRow;
@@ -17,6 +18,7 @@ import org.javacord.api.entity.message.component.ButtonStyle;
 import org.javacord.api.entity.message.embed.EmbedBuilder;
 import org.javacord.api.entity.permission.PermissionType;
 import org.javacord.api.interaction.SlashCommandInteraction;
+import org.javacord.api.interaction.SlashCommandInteractionOption;
 import org.javacord.api.interaction.SlashCommandOption;
 import org.javacord.api.interaction.SlashCommandOptionType;
 import org.javacord.api.interaction.callback.InteractionImmediateResponseBuilder;
@@ -40,7 +42,7 @@ public class VerifyCommand extends JavacordCommand {
 
         List<SlashCommandOption> optionList = new ArrayList<>(Collections.singletonList(
 
-                SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "channel", "Channel to send embed to", true)
+                SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "channel", "Channel to send embed to", false)
         ));
 
         this.getSlashCommandBuilder().setOptions(optionList);
@@ -52,42 +54,46 @@ public class VerifyCommand extends JavacordCommand {
             SlashCommandInteraction interaction = event.getSlashCommandInteraction();
             InteractionImmediateResponseBuilder responder = interaction.createImmediateResponder();
 
-            Channel channel = interaction.getArgumentByIndex(0).get().getChannelValue().get();
+            Optional<ServerChannel> optionalServerChannel = interaction.getArgumentByIndex(1).flatMap(SlashCommandInteractionOption::getChannelValue);
+            if (optionalServerChannel.isPresent()) {
+                ServerChannel serverChannel = optionalServerChannel.get();
 
-            Optional<TextChannel> textChannel = channel.asTextChannel();
-
-            if (textChannel.isEmpty()) {
-                return;
+                handleVerifyCommand(interaction, responder, (TextChannel) serverChannel);
+            } else {
+                interaction.getChannel().ifPresent(channel -> handleVerifyCommand(interaction, responder, channel));
             }
-
-            Icon icon = interaction.getApi().getYourself().getAvatar();
-
-            EmbedBuilder embed = new EmbedBuilder()
-                    .setDescription(
-                            "- **Witaj, zweryfikuj się, aby otrzymać dostęp do wszystkich kanałów. Weryfikując się, akceptujesz regulamin.**\n" +
-                            "- Nie zapomnij przywitać się z innymi użytkownikami.")
-                    .setImage("https://cdn.discordapp.com/attachments/1193569983377195008/1196799942593892384/helldev-weryfikacja.png?ex=65b8f1cd&is=65a67ccd&hm=6381c05968604c5bf8535c0d1cc192d1b6d8dadaa0f1d6334441204a11d5c200&")
-                    .setAuthor("•  HELLDEV.PL - Twój serwer code!", "", icon)
-                    .setFooter("© 2024 HELLDEV.PL", icon)
-                    .setColor(Color.RED)
-                    .setTimestampToNow();
-
-            Button button = new ButtonBuilder()
-                    .setStyle(ButtonStyle.SECONDARY)
-                    .setCustomId("verify")
-                    .setLabel("Zweryfikuj się")
-                    .setEmoji("\uD83D\uDC4B")
-                    .build();
-
-            ActionRow actionRow = ActionRow.of(button);
-            textChannel.get().sendMessage(embed, actionRow);
-
-            responder.setFlags(MessageFlag.EPHEMERAL);
-            messageConfig.embedCommandSent.applyToResponder(responder, new MapBuilder<String, Object>()
-                    .put("channel", channel.getId())
-                    .build());
-
-            responder.respond();
         };
+    }
+
+    private void handleVerifyCommand(SlashCommandInteraction interaction, InteractionImmediateResponseBuilder responder, TextChannel textChannel) {
+
+        Icon icon = interaction.getApi().getYourself().getAvatar();
+
+        EmbedBuilder embed = new EmbedBuilder()
+                .setDescription(
+                        "- **Witaj, zweryfikuj się, aby otrzymać dostęp do wszystkich kanałów. Weryfikując się, akceptujesz regulamin.**\n" +
+                                "- Nie zapomnij przywitać się z innymi użytkownikami.")
+                .setImage("https://cdn.discordapp.com/attachments/1193569983377195008/1196799942593892384/helldev-weryfikacja.png?ex=65b8f1cd&is=65a67ccd&hm=6381c05968604c5bf8535c0d1cc192d1b6d8dadaa0f1d6334441204a11d5c200&")
+                .setAuthor("•  HELLDEV.PL - Twój serwer code!", "", icon)
+                .setFooter("© 2024 HELLDEV.PL", icon)
+                .setColor(Color.RED)
+                .setTimestampToNow();
+
+        Button button = new ButtonBuilder()
+                .setStyle(ButtonStyle.SECONDARY)
+                .setCustomId("verify")
+                .setLabel("Zweryfikuj się")
+                .setEmoji("\uD83D\uDC4B")
+                .build();
+
+        ActionRow actionRow = ActionRow.of(button);
+        textChannel.sendMessage(embed, actionRow);
+
+        responder.setFlags(MessageFlag.EPHEMERAL);
+        messageConfig.embedCommandSent.applyToResponder(responder, new MapBuilder<String, Object>()
+                .put("channel", textChannel.getId())
+                .build());
+
+        responder.respond();
     }
 }

@@ -53,9 +53,7 @@ public class ClearCommand extends JavacordCommand {
 
                 handleClearCommand(interaction, responder, (TextChannel) serverChannel);
             } else {
-                interaction.getChannel().ifPresent(channel -> {
-                    handleClearCommand(interaction, responder, channel);
-                });
+                interaction.getChannel().ifPresent(channel -> handleClearCommand(interaction, responder, channel));
             }
         };
     }
@@ -84,7 +82,7 @@ public class ClearCommand extends JavacordCommand {
             EmbedBuilder embed = new EmbedBuilder()
                     .setTitle("Usunięto " + actualNumber + " wiadomości!")
                     .setDescription("→ Usunąłeś " + actualNumber + " wiadomości na kanale <#" + textChannel.getIdAsString() + ">")
-                    .setFooter("© 2023 HellDev -", interaction.getApi().getYourself().getAvatar())
+                    .setFooter("© 2024 HellDev -", interaction.getApi().getYourself().getAvatar())
                     .setAuthor("HellDev - Clear", "", interaction.getApi().getYourself().getAvatar())
                     .setColor(Color.GREEN)
                     .setTimestampToNow();
