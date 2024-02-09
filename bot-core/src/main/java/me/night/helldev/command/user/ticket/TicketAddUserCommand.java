@@ -3,7 +3,6 @@ package me.night.helldev.command.user.ticket;
 import cc.dreamcode.platform.javacord.component.command.JavacordCommand;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.NonNull;
-import me.night.helldev.config.MessageConfig;
 import me.night.helldev.functionality.ticket.Ticket;
 import me.night.helldev.functionality.ticket.TicketManager;
 import me.night.helldev.utility.MessageUtility;
@@ -17,7 +16,10 @@ import org.javacord.api.interaction.SlashCommandOptionType;
 import org.javacord.api.interaction.callback.InteractionImmediateResponseBuilder;
 import org.javacord.api.listener.interaction.SlashCommandCreateListener;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
 
 public class TicketAddUserCommand extends JavacordCommand {
 
