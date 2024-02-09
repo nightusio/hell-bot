@@ -5,7 +5,7 @@ import cc.dreamcode.utilities.builder.MapBuilder;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.NonNull;
 import me.night.helldev.config.MessageConfig;
-import org.javacord.api.entity.channel.Channel;
+import org.javacord.api.entity.channel.TextChannel;
 import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.permission.PermissionType;
 import org.javacord.api.interaction.*;
@@ -15,6 +15,7 @@ import org.javacord.api.listener.interaction.SlashCommandCreateListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class EmbedCommand extends JavacordCommand {
 
@@ -29,10 +30,9 @@ public class EmbedCommand extends JavacordCommand {
         this.getSlashCommandBuilder().setDefaultEnabledForPermissions(PermissionType.ADMINISTRATOR);
 
         List<SlashCommandOption> optionList = new ArrayList<>(Arrays.asList(
-
                 SlashCommandOption.create(SlashCommandOptionType.STRING, "title", "Title of embed", true),
                 SlashCommandOption.create(SlashCommandOptionType.STRING, "message", "Message of embed", true),
-                SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "channel", "Channel to send embed to", true)
+                SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "channel", "Channel to send embed to", false)
         ));
 
         this.getSlashCommandBuilder().setOptions(optionList);
@@ -44,27 +44,39 @@ public class EmbedCommand extends JavacordCommand {
             SlashCommandInteraction interaction = event.getSlashCommandInteraction();
             InteractionImmediateResponseBuilder responder = interaction.createImmediateResponder();
 
-            String title = interaction.getArgumentByIndex(0).get().getStringRepresentationValue().get();
-            Channel channel = interaction.getArgumentByIndex(2).get().getChannelValue().get();
-            String message = interaction.getArgumentByIndex(1).get().getStringRepresentationValue().get();
+            String title = interaction.getArgumentByIndex(0).flatMap(SlashCommandInteractionOption::getStringRepresentationValue).orElse("No title provided");
+            String message = interaction.getArgumentByIndex(1).flatMap(SlashCommandInteractionOption::getStringRepresentationValue).orElse("No message provided");
 
+            Optional<TextChannel> channelOptional = interaction.getArgumentByIndex(2)
+                    .flatMap(SlashCommandInteractionOption::getChannelValue)
+                    .map(channel -> {
+                        if (channel instanceof TextChannel) {
+                            return (TextChannel) channel;
+                        } else {
+                            return null;
+                        }
+                    });
 
-            try {
-                messageConfig.embedCommand.send(channel.asServerTextChannel().get(), new MapBuilder<String, Object>()
+            if (channelOptional.isPresent()) {
+                TextChannel channel = channelOptional.get();
+                messageConfig.embedCommand.send(channel, new MapBuilder<String, Object>()
                         .put("title", title)
                         .put("message", message)
                         .build());
-            } catch (NullPointerException e) {
-                e.printStackTrace();
+                messageConfig.embedCommandSent.applyToResponder(responder, new MapBuilder<String, Object>()
+                        .put("channel", channel.getIdAsString())
+                        .build());
+            } else {
+                messageConfig.embedCommand.send(interaction.getChannel().orElseThrow(), new MapBuilder<String, Object>()
+                        .put("title", title)
+                        .put("message", message)
+                        .build());
+                messageConfig.embedCommandSent.applyToResponder(responder, new MapBuilder<String, Object>()
+                        .put("channel", interaction.getChannel().orElseThrow().getIdAsString())
+                        .build());
             }
 
-
-
             responder.setFlags(MessageFlag.EPHEMERAL);
-            messageConfig.embedCommandSent.applyToResponder(responder, new MapBuilder<String, Object>()
-                    .put("channel", channel.getId())
-                    .build());
-
             responder.respond();
         };
     }

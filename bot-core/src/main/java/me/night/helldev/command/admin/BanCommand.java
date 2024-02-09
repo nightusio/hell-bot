@@ -18,7 +18,6 @@ import org.javacord.api.interaction.callback.InteractionImmediateResponseBuilder
 import org.javacord.api.listener.interaction.SlashCommandCreateListener;
 
 import java.awt.*;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

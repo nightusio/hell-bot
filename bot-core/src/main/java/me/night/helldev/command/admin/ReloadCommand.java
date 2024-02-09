@@ -60,8 +60,6 @@ public class ReloadCommand extends JavacordCommand {
                         .build());
             }
             catch (NullPointerException | OkaeriException e) {
-                e.printStackTrace();
-
                 this.messageConfig.reloadFailed.applyToResponder(responder, new MapBuilder<String, Object>()
                         .put("reason", e.getMessage())
                         .build());
