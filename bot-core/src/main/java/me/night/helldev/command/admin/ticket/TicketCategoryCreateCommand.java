@@ -1,7 +1,6 @@
 package me.night.helldev.command.admin.ticket;
 
 import cc.dreamcode.platform.javacord.component.command.JavacordCommand;
-import cc.dreamcode.utilities.builder.MapBuilder;
 import com.vdurmont.emoji.EmojiParser;
 import eu.okaeri.configs.exception.OkaeriException;
 import eu.okaeri.injector.annotation.Inject;
@@ -10,17 +9,13 @@ import me.night.helldev.config.MessageConfig;
 import me.night.helldev.functionality.ticket.category.TicketCategory;
 import me.night.helldev.functionality.ticket.category.TicketCategoryManager;
 import org.javacord.api.entity.channel.ServerChannel;
+import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.permission.PermissionType;
-import org.javacord.api.interaction.SlashCommandInteraction;
-import org.javacord.api.interaction.SlashCommandInteractionOption;
-import org.javacord.api.interaction.SlashCommandOption;
-import org.javacord.api.interaction.SlashCommandOptionType;
+import org.javacord.api.interaction.*;
 import org.javacord.api.interaction.callback.InteractionImmediateResponseBuilder;
 import org.javacord.api.listener.interaction.SlashCommandCreateListener;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class TicketCategoryCreateCommand extends JavacordCommand {
 
@@ -36,15 +31,14 @@ public class TicketCategoryCreateCommand extends JavacordCommand {
 
         this.getSlashCommandBuilder().setDefaultEnabledForPermissions(PermissionType.ADMINISTRATOR);
 
-        List<SlashCommandOption> optionList = new ArrayList<>(Arrays.asList(
-
+        List<SlashCommandOption> optionList = Arrays.asList(
                 SlashCommandOption.create(SlashCommandOptionType.STRING, "id", "Id name of ticket category ex. `usluga` ", true),
                 SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "category", "Category that will store tickets of given type", true),
                 SlashCommandOption.create(SlashCommandOptionType.STRING, "name", "Name that will be displayed in menu", true),
                 SlashCommandOption.create(SlashCommandOptionType.STRING, "description", "Description that will be displayed in menu", true),
                 SlashCommandOption.create(SlashCommandOptionType.STRING, "emoji", "Emoji that will be displayed", true)
+        );
 
-        ));
         this.getSlashCommandBuilder().setOptions(optionList);
     }
 
@@ -54,54 +48,48 @@ public class TicketCategoryCreateCommand extends JavacordCommand {
             SlashCommandInteraction interaction = event.getSlashCommandInteraction();
             InteractionImmediateResponseBuilder responder = interaction.createImmediateResponder();
 
-            String id = interaction.getArgumentByIndex(0)
-                    .flatMap(SlashCommandInteractionOption::getStringValue)
-                    .orElse(null);
+            interaction.getOptionByName("id").ifPresentOrElse(idOption -> {
+                String id = idOption.getStringValue().orElseThrow();
+                interaction.getOptionByName("category").flatMap(SlashCommandInteractionOption::getChannelValue).ifPresentOrElse(serverChannel -> {
+                    String name = interaction.getOptionByName("name").flatMap(SlashCommandInteractionOption::getStringValue).orElseThrow();
+                    String description = interaction.getOptionByName("description").flatMap(SlashCommandInteractionOption::getStringValue).orElseThrow();
+                    String emoji = interaction.getOptionByName("emoji").flatMap(SlashCommandInteractionOption::getStringValue).orElseThrow();
 
-            ServerChannel serverChannel = interaction.getArgumentByIndex(1)
-                    .flatMap(SlashCommandInteractionOption::getChannelValue)
-                    .orElse(null);
+                    long categoryId = serverChannel.getId();
 
-            String name = interaction.getArgumentByIndex(2)
-                    .flatMap(SlashCommandInteractionOption::getStringValue)
-                    .orElse(null);
+                    try {
+                        String unicode = emojiToUnicode(emoji);
 
-            String description = interaction.getArgumentByIndex(3)
-                    .flatMap(SlashCommandInteractionOption::getStringValue)
-                    .orElse(null);
+                        TicketCategory ticketCategory = new TicketCategory(id, categoryId, name, description, unicode);
+                        ticketCategoryManager.createTicketCategory(ticketCategory);
 
-            String emoji = interaction.getArgumentByIndex(4)
-                    .flatMap(SlashCommandInteractionOption::getStringValue)
-                    .orElse(null);
-
-            if (id == null) return;
-            if (serverChannel == null) return;
-            if (emoji == null) return;
-
-            long categoryId = serverChannel.getId();
-
-            try {
-                String unicode = emojiToUnicode(emoji);
-
-                TicketCategory ticketCategory = new TicketCategory(id, categoryId, name, description, unicode );
-                ticketCategoryManager.createTicketCategory(ticketCategory);
-
-                messageConfig.successfullyCreateTicketCategory.applyToResponder(responder, new MapBuilder<String, Object>()
-                        .put("category_name", id)
-                        .put("category_id", categoryId)
-                        .build());
-
-            } catch (OkaeriException | NullPointerException exception) {
-                messageConfig.cannotCreateTicketCategory.applyToResponder(responder, new MapBuilder<String, Object>()
-                        .put("error", exception.getCause().toString())
-                        .build());
-            }
+                        messageConfig.successfullyCreateTicketCategory.applyToResponder(responder, Map.of(
+                                "category_name", id,
+                                "category_id", categoryId
+                        ));
+                    } catch (OkaeriException exception) {
+                        messageConfig.cannotCreateTicketCategory.applyToResponder(responder, Map.of(
+                                "error", "Failed to create ticket category: " + exception.getMessage()
+                        ));
+                    }
+                }, () -> {
+                    responder.setFlags(MessageFlag.EPHEMERAL);
+                    messageConfig.cannotCreateTicketCategory.applyToResponder(responder, Map.of(
+                            "error", "Channel option not present"
+                    ));
+                });
+            }, () -> {
+                responder.setFlags(MessageFlag.EPHEMERAL);
+                messageConfig.cannotCreateTicketCategory.applyToResponder(responder, Map.of(
+                        "error", "ID option not present"
+                ));
+            });
 
             responder.respond();
         };
     }
 
-    public static String emojiToUnicode(String emoji) {
+    private static String emojiToUnicode(String emoji) {
         return EmojiParser.parseToUnicode(emoji);
     }
 }
