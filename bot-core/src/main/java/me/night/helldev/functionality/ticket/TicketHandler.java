@@ -30,7 +30,9 @@ public class TicketHandler {
     private final TicketCategoryManager ticketCategoryManager;
     private final TicketConfig ticketConfig;
 
-    public void createNewTicket(User user, String category, Server server) {
+    //todo dodawanie osob z dana ranga 
+
+    public TextChannel createNewTicket(User user, String category, Server server) {
         int ticketId = newTicketId();
 
         Ticket ticket = ticketManager.createTicket(ticketId, user.getId(), category, server);
@@ -66,6 +68,7 @@ public class TicketHandler {
         ticketManager.setChannelId(ticket, channel.getId());
         ticketManager.setMessageId(ticket, message.getId());
 
+        return channel;
     }
 
     public void closeTicket(Server server, User user, ButtonClickEvent event, Ticket ticket, String buttonDeleteTicket) {

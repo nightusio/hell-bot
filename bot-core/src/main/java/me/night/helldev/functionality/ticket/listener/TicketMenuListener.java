@@ -1,14 +1,18 @@
 package me.night.helldev.functionality.ticket.listener;
 
+import cc.dreamcode.utilities.builder.MapBuilder;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import me.night.helldev.config.MessageConfig;
 import me.night.helldev.functionality.ticket.TicketHandler;
 import me.night.helldev.functionality.ticket.TicketManager;
 import me.night.helldev.functionality.ticket.category.TicketCategory;
 import me.night.helldev.functionality.ticket.category.TicketCategoryManager;
 import me.night.helldev.functionality.ticket.exception.TicketError;
 import me.night.helldev.utility.MessageUtility;
+import org.javacord.api.entity.channel.TextChannel;
+import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.message.component.SelectMenuOption;
 import org.javacord.api.entity.server.Server;
 import org.javacord.api.entity.user.User;
@@ -24,6 +28,7 @@ public class TicketMenuListener implements SelectMenuChooseListener {
     private final TicketManager ticketManager;
     private final TicketHandler ticketHandler;
     private final TicketCategoryManager ticketCategoryManager;
+    private final MessageConfig messageConfig;
 
     @Override
     public void onSelectMenuChoose(SelectMenuChooseEvent event) {
@@ -62,7 +67,11 @@ public class TicketMenuListener implements SelectMenuChooseListener {
             });
         } else {
             try {
-               ticketHandler.createNewTicket(user, category, server);
+               TextChannel textChannel = ticketHandler.createNewTicket(user, category, server);
+               event.getInteraction().createImmediateResponder().setFlags(MessageFlag.EPHEMERAL);
+               messageConfig.ticketCreated.applyToResponder(event.getInteraction().createImmediateResponder(), new MapBuilder<String, Object>()
+                       .put("channel", textChannel.getId())
+                       .build());
             } catch (TicketError e) {
                 MessageUtility.respondWithEphemeralMessage(event, e.getMessage());
             }

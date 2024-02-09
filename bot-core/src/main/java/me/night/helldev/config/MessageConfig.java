@@ -44,7 +44,7 @@ public class MessageConfig extends OkaeriConfig {
 
     public Notice embedCommandSent = new Notice(NoticeType.MESSAGE, "[ ✅ ] Wyslano wiadomosc na kanal: <#{channel}>");
 
-    public String ticketCreated = "[ ✅ ] Pomyslnie stworzyles ticket! <#{channel}>!";
+    public Notice ticketCreated = new Notice(NoticeType.MESSAGE,  "[ ✅ ] Pomyslnie stworzyles ticket! <#{channel}>!");
 
     public String verifiedSuccess = "[ ✅ ] Pomyslnie sie zweryfikowales!";
 
