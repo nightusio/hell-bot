@@ -43,7 +43,7 @@ public class WarnCommand  extends JavacordCommand {
         List<SlashCommandOption> optionList = new ArrayList<>(Arrays.asList(
 
                 SlashCommandOption.create(SlashCommandOptionType.USER, "user", "User to warn", true),
-                SlashCommandOption.create(SlashCommandOptionType.STRING, "description", "Warn description", true)
+                SlashCommandOption.create(SlashCommandOptionType.STRING, "description", "Warn description", false)
         ));
 
         this.getSlashCommandBuilder().setOptions(optionList);
@@ -69,10 +69,9 @@ public class WarnCommand  extends JavacordCommand {
 
             String warnDescription = interaction.getArgumentByIndex(1)
                     .flatMap(SlashCommandInteractionOption::getStringValue)
-                    .orElse(null);
+                    .orElse("Brak");
 
             if (warnedUser == null) return;
-            if (warnDescription == null) return;
 
             User warningUser = interaction.getUser();
 

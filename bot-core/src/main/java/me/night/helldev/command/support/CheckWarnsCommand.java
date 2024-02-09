@@ -38,8 +38,6 @@ public class CheckWarnsCommand extends JavacordCommand {
             SlashCommandInteraction interaction = event.getSlashCommandInteraction();
             InteractionImmediateResponseBuilder responder = interaction.createImmediateResponder().setFlags(MessageFlag.EPHEMERAL);
 
-
-
             interaction.getArgumentByIndex(0)
                     .flatMap(SlashCommandInteractionOption::getUserValue)
                     .ifPresent(user -> {
