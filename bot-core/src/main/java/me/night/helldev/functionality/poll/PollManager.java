@@ -13,6 +13,7 @@ public class PollManager {
     public Poll createPoll() {
         int newPollId = generateUniquePollId();
         Poll poll = new Poll(newPollId);
+        pollConfig.polls.add(poll);
         pollConfig.save();
         return poll;
     }
@@ -49,9 +50,12 @@ public class PollManager {
     }
 
     private int generateUniquePollId() {
-        return pollConfig.polls.stream()
+        int maxId = pollConfig.polls.stream()
                 .mapToInt(Poll::getId)
                 .max()
-                .orElse(0) + 1;
+                .orElse(0);
+
+        return maxId + 1;
     }
+
 }

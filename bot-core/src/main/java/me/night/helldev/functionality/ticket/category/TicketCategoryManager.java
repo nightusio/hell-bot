@@ -16,6 +16,8 @@ public class TicketCategoryManager {
     private final TicketConfig ticketConfig;
 
     /**
+     * /**
+     * <p>
      * Creates a new ticket category and saves the updated configuration.
      *
      * @param ticketCategory The ticket category to be created.
@@ -24,6 +26,7 @@ public class TicketCategoryManager {
         ticketConfig.ticketCategories.add(ticketCategory);
         ticketConfig.save();
     }
+
 
     /**
      * Removes an existing ticket category and saves the updated configuration.
@@ -34,6 +37,7 @@ public class TicketCategoryManager {
         ticketConfig.ticketCategories.remove(ticketCategory);
         ticketConfig.save();
     }
+
 
     /**
      * Retrieves a ticket category based on its identifier, which can be the category ID or other attributes.
@@ -55,7 +59,9 @@ public class TicketCategoryManager {
                                 || category.getTicketName().equalsIgnoreCase(identifier))
                         .findFirst()
                         .orElseThrow(() -> new TicketException("Invalid Category")));
+
     }
+
 
     /**
      * Retrieves the ticket category associated with a given ticket.
@@ -71,6 +77,7 @@ public class TicketCategoryManager {
                 .orElseThrow(() -> new TicketError("Ticket category is not found!"));
     }
 
+
     /**
      * Retrieves a ticket category based on its category ID.
      *
@@ -78,7 +85,7 @@ public class TicketCategoryManager {
      * @return The corresponding ticket category.
      * @throws TicketException If no matching category is found.
      */
-    //unchecked//
+//unchecked//
     public TicketCategory getCategoryById(String categoryId) throws TicketException {
         return ticketConfig.ticketCategories.stream()
                 .filter(category -> String.valueOf(category.getCategoryId()).equalsIgnoreCase(categoryId))
@@ -86,11 +93,14 @@ public class TicketCategoryManager {
                 .orElseThrow(() -> new TicketException("Category not found with ID: " + categoryId));
     }
 
+
+
     /**
      * Retrieves a list of all ticket categories.
      *
      * @return The list of ticket categories.
      */
+
     public List<TicketCategory> getTicketCategories() {
         return new ArrayList<>(ticketConfig.ticketCategories);
     }

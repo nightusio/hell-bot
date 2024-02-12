@@ -54,16 +54,12 @@ public class TicketRemoveUserCommand extends JavacordCommand {
 
             TextChannel textChannel = optionalTextChannel.get();
 
-            Ticket ticket = ticketManager.getExistingTicket(textChannel.getId());
+            ticketManager.getExistingTicket(textChannel.getId()).ifPresent(ticket -> {
+                if (user == null) return;
 
-            if (user == null) return;
+                ticketManager.removeUserFromTicket(event, ticket, user);
+            });
 
-            if (ticket == null) {
-                MessageUtility.respondWithEphemeralMessage(event, "Tej komendy mozesz uzyc tylko na kanale z ticketem!");
-                return;
-            }
-
-            ticketManager.removeUserFromTicket(event, ticket, user);
 
             responder.respond();
         };

@@ -7,6 +7,7 @@ import me.night.helldev.functionality.poll.PollConfig;
 import me.night.helldev.functionality.poll.PollManager;
 import me.night.helldev.functionality.shared.SharedType;
 import me.night.helldev.utility.ButtonEditUtility;
+import me.night.helldev.utility.MessageUtility;
 import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.user.User;
 import org.javacord.api.event.interaction.ButtonClickEvent;
@@ -26,9 +27,17 @@ public class PollButtonListener implements ButtonClickListener {
 
         if (poll == null) return;
 
+        if (customId.contains("pollcheck-" + poll.getId())) {
+            MessageUtility.respondWithEphemeralMessage(event, "Osoby ktore zaglosowaly: " +
+                    poll.getVotedUsers());
+            return;
+        }
+
+
         SharedType sharedType = customId.contains("pollyes-" + poll.getId()) ?
                 poll.addVote(user, true) :
                 poll.addVote(user, false);
+
 
         String responseMessage;
         switch (sharedType) {
@@ -49,14 +58,8 @@ public class PollButtonListener implements ButtonClickListener {
         }
 
         pollConfig.save();
-        respondWithEphemeralMessage(event, responseMessage);
+        MessageUtility.respondWithEphemeralMessage(event, responseMessage);
         ButtonEditUtility.editActionRowsPoll(user.getApi(), poll);
     }
 
-    private void respondWithEphemeralMessage(ButtonClickEvent event, String content) {
-        event.getInteraction().createImmediateResponder()
-                .setContent(content)
-                .setFlags(MessageFlag.EPHEMERAL)
-                .respond();
-    }
 }

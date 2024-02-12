@@ -57,16 +57,11 @@ public class TicketAddUserCommand extends JavacordCommand {
 
             TextChannel textChannel = optionalTextChannel.get();
 
-            Ticket ticket = ticketManager.getExistingTicket(textChannel.getId());
+            ticketManager.getExistingTicket(textChannel.getId()).ifPresent(ticket -> {
+                if (user == null) return;
 
-            if (user == null) return;
-
-            if (ticket == null) {
-                MessageUtility.respondWithEphemeralMessage(event, "Tej komendy mozesz uzyc tylko na kanale z ticketem!");
-                return;
-            }
-
-            ticketManager.addUserToTicket(event, ticket, user);
+                ticketManager.addUserToTicket(event, ticket, user);
+            });
 
             responder.respond();
         };

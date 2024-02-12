@@ -46,15 +46,16 @@ public class TicketMenuListener implements SelectMenuChooseListener {
             SelectMenuOption selectedOption = chosenOptions.get(0);
             String selectedStripped = selectedOption.getValue().replaceAll("ticket_", "");
 
-            long userChannelId = ticketManager.getUserTicketByCategory(user.getId(), selectedOption.getValue());
-
-            for (TicketCategory ticketCategory : ticketCategoryManager.getTicketCategories()) {
-                if (selectedOption.getValue().equals(ticketCategory.getButtonIDMenu())) {
-                    handleTicketButton(event, server, userChannelId, user, selectedStripped);
-                    event.getInteraction().createImmediateResponder().respond();
-                    break;
+            ticketManager.getUserTicketByCategory(user.getId(), selectedOption.getValue()).ifPresent(userChannelId -> {
+                for (TicketCategory ticketCategory : ticketCategoryManager.getTicketCategories()) {
+                    if (selectedOption.getValue().equals(ticketCategory.getButtonIDMenu())) {
+                        handleTicketButton(event, server, userChannelId, user, selectedStripped);
+                        event.getInteraction().createImmediateResponder().respond();
+                        break;
+                    }
                 }
-            }
+            });
+
         }
     }
 

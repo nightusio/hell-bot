@@ -9,9 +9,10 @@ import me.night.helldev.config.BotConfig;
 import me.night.helldev.config.MessageConfig;
 import me.night.helldev.functionality.poll.Poll;
 import me.night.helldev.functionality.poll.PollManager;
-import org.javacord.api.entity.channel.Channel;
+import org.javacord.api.entity.channel.ServerChannel;
 import org.javacord.api.entity.channel.TextChannel;
 import org.javacord.api.entity.emoji.CustomEmoji;
+import org.javacord.api.entity.emoji.Emoji;
 import org.javacord.api.entity.message.Message;
 import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.message.component.ActionRow;
@@ -63,11 +64,10 @@ public class PollCommand extends JavacordCommand {
             InteractionImmediateResponseBuilder responder = interaction.createImmediateResponder();
 
             String message = interaction.getArgumentByIndex(0).flatMap(SlashCommandInteractionOption::getStringValue).orElse("");
-            Optional<Channel> channelOption = interaction.getArgumentByIndex(1).flatMap(SlashCommandInteractionOption::getChannelValue);
+            Optional<ServerChannel> channelOption = interaction.getArgumentByIndex(1).flatMap(SlashCommandInteractionOption::getChannelValue);
 
             Poll poll = pollManager.createPoll();
 
-            // Build the embed for the poll
             EmbedBuilder embed = new EmbedBuilder()
                     .setTitle("Treść Ankiety:")
                     .setDescription("→ **" + message + "** \n")
@@ -75,17 +75,20 @@ public class PollCommand extends JavacordCommand {
                     .addField("→ " + botConfig.upVoteId + " - Tak/Jestem za!", "**→ " + botConfig.downVoteId + " - Nie/Nie jestem za.**")
                     .setFooter("© 2024 HELLDEV.PL")
                     .setImage("https://cdn.discordapp.com/attachments/1195848786279411829/1196785430658547762/helldev-ankieta.png?ex=65b8e449&is=65a66f49&hm=78f8b62c6b8b2d3773ea38eebb9d48bf2c5f405fd5bca7825b0525e440c908ce&")
-                    .setAuthor("•  HELLDEV.PL - Twój serwer code!", "", interaction.getApi().getYourself().getAvatar())
+                    .setAuthor("•  HELLDEV.PL - Twój serwer code! | " + poll.getId(), "", interaction.getApi().getYourself().getAvatar())
                     .setColor(new Color(220, 3, 48))
                     .setTimestampToNow();
 
             CustomEmoji tak = hellBot.getDiscordApi().getCustomEmojiById("1196786062182338611").orElse(null);
             CustomEmoji nie = hellBot.getDiscordApi().getCustomEmojiById("1196786067081281627").orElse(null);
+            Emoji check = hellBot.getDiscordApi().getCustomEmojiById("1206662704597700731").orElse(null);
+
 
             Button yesButton = Button.success("pollyes-"+ poll.getId(), ": 0", tak);
             Button noButton = Button.danger("pollno-"+ poll.getId(), ": 0", nie);
+            Button checkButton = Button.primary("pollcheck-"+ poll.getId(), "Sprawdz kto zaglosowal", check);
 
-            ActionRow actionRow = ActionRow.of(yesButton, noButton);
+            ActionRow actionRow = ActionRow.of(yesButton, noButton, checkButton);
 
             AtomicReference<Message> pollMessage = new AtomicReference<>();
 
@@ -94,16 +97,17 @@ public class PollCommand extends JavacordCommand {
                 pollMessage.set(textChannel.sendMessage(embed, actionRow).join());
 
                 pollManager.setMessageId(poll, pollMessage.get().getId());
-                pollManager.setTextChannel(poll, pollMessage.get().getChannel().getId());
+                pollManager.setTextChannel(poll, textChannel.getId());
             } else {
                 interaction.getChannel().ifPresent(channel -> {
                     pollMessage.set(channel.sendMessage(embed, actionRow).join());
+
                     pollManager.setMessageId(poll, pollMessage.get().getId());
-                    pollManager.setTextChannel(poll, pollMessage.get().getChannel().getId());
+                    pollManager.setTextChannel(poll, channel.getId());
                 });
             }
 
-            // Set the response flags and send the response
+
             responder.setFlags(MessageFlag.EPHEMERAL);
             messageConfig.embedCommandSent.applyToResponder(responder, new MapBuilder<String, Object>()
                     .put("channel", pollMessage.get().getChannel().getId())

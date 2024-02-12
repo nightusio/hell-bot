@@ -2,29 +2,31 @@ package me.night.helldev.functionality.poll;
 
 import lombok.Data;
 import lombok.Getter;
-import me.night.helldev.HellBot;
 import me.night.helldev.functionality.crash.CrashManager;
 import me.night.helldev.functionality.shared.SharedType;
 import org.javacord.api.entity.user.User;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @Getter
 public class Poll {
 
     private int id;
-    private long messageId = 0L;
-    private long textChannel = 0L;
-    private int votesYes = 0;
-    private int votesNo = 0;
-    private List<Long> votedUsers = new ArrayList<>();
+    private long messageId;
+    private long textChannel;
+    private int votesYes;
+    private int votesNo;
+    private List<Long> votedUsers;
 
     public Poll(int id) {
         this.id = id;
+        this.messageId = 0L;
+        this.textChannel = 0L;
+        this.votesNo = 0;
+        this.votesYes = 0;
+        this.votedUsers = new ArrayList<>();
     }
 
     private void updateVotes(boolean voteYes) {

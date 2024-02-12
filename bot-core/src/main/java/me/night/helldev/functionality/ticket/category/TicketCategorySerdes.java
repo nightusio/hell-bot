@@ -30,12 +30,19 @@ public class TicketCategorySerdes implements ObjectSerializer<TicketCategory> {
 
     @Override
     public TicketCategory deserialize(@NonNull DeserializationData data, @NonNull GenericsDeclaration generics) {
-        return new TicketCategory(
+        TicketCategory ticketCategory = new TicketCategory(
                 data.get("id", String.class),
                 data.get("categoryId", long.class),
                 data.get("name", String.class),
                 data.get("description", String.class),
                 data.get("emoji", String.class)
-                );
+        );
+
+        ticketCategory.setButtonIDMenu(data.get("buttonIDMenu", String.class));
+        ticketCategory.setButtonClose(data.get("buttonClose", String.class));
+        ticketCategory.setButtonConfirmClose(data.get("buttonConfirmClose", String.class));
+        ticketCategory.setButtonDelete(data.get("buttonDelete", String.class));
+        ticketCategory.setTicketName(data.get("ticketName", String.class));
+        return ticketCategory;
     }
 }

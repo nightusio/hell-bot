@@ -2,7 +2,6 @@ package me.night.helldev.functionality.ticket.listener;
 
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;
-import me.night.helldev.functionality.ticket.Ticket;
 import me.night.helldev.functionality.ticket.TicketHandler;
 import me.night.helldev.functionality.ticket.TicketManager;
 import me.night.helldev.functionality.ticket.category.TicketCategory;
@@ -39,34 +38,32 @@ public class TicketButtonListener implements ButtonClickListener {
 
         Channel channel = optionalChannel.get();
 
-        Ticket ticket = ticketManager.getExistingTicket(channel.getId());
-        TextChannel textChannel;
+        ticketManager.getExistingTicket(channel.getId()).ifPresent(ticket -> {
+            TextChannel textChannel;
 
+            for (TicketCategory ticketCategory : ticketCategoryManager.getTicketCategories()) {
 
-        if(ticket == null) return;
+                if (event.getButtonInteraction().getCustomId().equals(ticketCategory.getButtonClose())) {
+                    TicketButtonEditUtility.editActionRowsCloseTicket(event.getApi(), ticket, ticketCategoryManager);
+                    event.getInteraction().createImmediateResponder().respond();
+                    break;
 
-        for (TicketCategory ticketCategory : ticketCategoryManager.getTicketCategories()) {
+                } else if (event.getButtonInteraction().getCustomId().equals(ticketCategory.getButtonConfirmClose())) {
+                    textChannel = event.getApi().getTextChannelById(ticket.getChannelId()).get();
+                    textChannel.sendMessage("```Ticket został zamkniety przez: " + event.getInteraction().getUser().getName() + "```");
 
-            if (event.getButtonInteraction().getCustomId().equals(ticketCategory.getButtonClose())) {
-                TicketButtonEditUtility.editActionRowsCloseTicket(event.getApi(), ticket, ticketCategoryManager);
-                event.getInteraction().createImmediateResponder().respond();
-                break;
+                    ticketHandler.closeTicket(server, user, event, ticket, ticketCategory.getButtonDelete());
+                    TicketButtonEditUtility.editActionRowsClosedTicket(event.getApi(), ticket);
+                    break;
 
-            } else if (event.getButtonInteraction().getCustomId().equals(ticketCategory.getButtonConfirmClose())) {
-                textChannel = event.getApi().getTextChannelById(ticket.getChannelId()).get();
-                textChannel.sendMessage("```Ticket został zamkniety przez: " + event.getInteraction().getUser().getName() + "```");
+                } else if (event.getButtonInteraction().getCustomId().equals(ticketCategory.getButtonDelete())) {
+                    ticketHandler.deleteTicket(server, ticket);
+                    break;
 
-                ticketHandler.closeTicket(server, user, event, ticket, ticketCategory.getButtonDelete());
-                TicketButtonEditUtility.editActionRowsClosedTicket(event.getApi(), ticket);
-                break;
-
-            } else if (event.getButtonInteraction().getCustomId().equals(ticketCategory.getButtonDelete())) {
-                ticketHandler.deleteTicket(server, ticket);
-                break;
+                }
 
             }
-
-        }
+        });
     }
 
 }

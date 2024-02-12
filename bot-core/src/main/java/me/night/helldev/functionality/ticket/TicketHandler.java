@@ -90,11 +90,11 @@ public class TicketHandler {
                 .setDescription("```       \uD83D\uDCE7 × HellDev.pl - Admin Panel       ```\n" +
                         "\n" +
                         "> Kliknij przycisk ponizej aby usunac ticket\n")
-                .setFooter("© 2023 helldev.pl •")
+                .setFooter("© 2024 helldev.pl •")
                 .setColor(Color.RED)
                 .setTimestampToNow();
 
-        Button deleteButton = Button.danger(buttonDeleteTicket, "Usun Ticket", "\uD83D\uDDD1\uFE0F");
+        Button deleteButton = Button.danger(buttonDeleteTicket, "Usun Ticket", "\uD83D\uDDD1️");
         ActionRow adminPanelRow = ActionRow.of(deleteButton);
 
         event.getInteraction().createImmediateResponder()
@@ -123,8 +123,7 @@ public class TicketHandler {
                         "\n" +
                         "> Administracja zostala poinformowana\n" +
                         "> **Dostaniesz odpowiedz do 48h!**\n")
-                .setFooter("© 2023 helldev.pl •")
-                .setImage("https://cdn.discordapp.com/attachments/1061416752875057192/1116102615500070912/20230607_222956.jpg?ex=6570da8f&is=655e658f&hm=2028d8a7d3ddc9887f25276cd7a55af61f78771a1b6c17eaa01c129b2a4a383f&")
+                .setFooter("© 2024 helldev.pl •")
                 .setColor(Color.RED)
                 .setTimestampToNow();
 

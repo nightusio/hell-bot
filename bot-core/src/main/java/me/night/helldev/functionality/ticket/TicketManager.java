@@ -14,6 +14,7 @@ import org.javacord.api.entity.server.Server;
 import org.javacord.api.entity.user.User;
 import org.javacord.api.event.interaction.SlashCommandCreateEvent;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Optional;
 
@@ -24,7 +25,7 @@ public class TicketManager {
     private final TicketCategoryManager ticketCategoryManager;
 
     public Ticket createTicket(int id, long userID, String category, Server server) {
-        Ticket ticket = new Ticket(id, userID, category, server.getId(), new HashSet<>(), 0L, 0L);
+        Ticket ticket = new Ticket(id, userID, category, server.getId(), new ArrayList<>(), 0L, 0L);
         ticketConfig.tickets.add(ticket);
         ticketConfig.save();
         return ticket;
@@ -36,11 +37,10 @@ public class TicketManager {
      * @param channelID The channel ID of the ticket to retrieve.
      * @return The existing ticket or null if not found.
      */
-    public Ticket getExistingTicket(long channelID) {
+    public Optional<Ticket> getExistingTicket(long channelID) {
         return ticketConfig.tickets.stream()
                 .filter(ticket -> ticket.getChannelId() == channelID)
-                .findFirst()
-                .orElse(null);
+                .findFirst();
     }
 
     /**
@@ -64,34 +64,34 @@ public class TicketManager {
      * @param categoryId The ID of the TicketCategory to filter by.
      * @return The channel ID of the matching ticket or 0 if not found.
      */
-    public long getUserTicketByCategory(long userID, String categoryId) {
+    public Optional<Long> getUserTicketByCategory(long userID, String categoryId) {
         Optional<Ticket> matchingTicket = ticketConfig.tickets.stream()
-                .filter(ticket -> ticket.getUserId() == userID &&
-                        isTicketCategoryMatch(ticket.getCategory(), categoryId))
+                .filter(ticket -> ticket.getUserId() == userID && isTicketCategoryMatch(ticket.getCategory(), categoryId))
                 .findFirst();
 
-        return matchingTicket.map(Ticket::getChannelId).orElse(0L);
+        return matchingTicket.map(Ticket::getChannelId);
+
+    }
+    private Optional<TicketCategory> getTicketCategory(String categoryId) {
+        try {
+            return Optional.of(ticketCategoryManager.getTicketCategory(categoryId));
+        } catch (TicketException e) {
+            return Optional.empty();
+        }
     }
 
-    /**
-     * Checks if the given category matches the specified TicketCategory ID.
-     *
-     * @param category   The category of the ticket.
-     * @param categoryId The ID of the TicketCategory to match.
-     * @return True if the category matches the TicketCategory ID, false otherwise.
-     */
+
     private boolean isTicketCategoryMatch(String category, String categoryId) {
-        try {
-            TicketCategory ticketCategory = ticketCategoryManager.getTicketCategory(categoryId);
-            return ticketCategory.getId().equalsIgnoreCase(category)
-                    || ticketCategory.getButtonIDMenu().equalsIgnoreCase(category)
-                    || ticketCategory.getButtonClose().equalsIgnoreCase(category)
-                    || ticketCategory.getButtonConfirmClose().equalsIgnoreCase(category)
-                    || ticketCategory.getButtonDelete().equalsIgnoreCase(category)
-                    || ticketCategory.getTicketName().equalsIgnoreCase(category);
-        } catch (TicketException e) {
-            return false;
-        }
+        Optional<TicketCategory> ticketCategory = getTicketCategory(categoryId);
+
+        return ticketCategory.map(cat ->
+                cat.getId().equalsIgnoreCase(category)
+                        || cat.getButtonIDMenu().equalsIgnoreCase(category)
+                        || cat.getButtonClose().equalsIgnoreCase(category)
+                        || cat.getButtonConfirmClose().equalsIgnoreCase(category)
+                        || cat.getButtonDelete().equalsIgnoreCase(category)
+                        || cat.getTicketName().equalsIgnoreCase(category)
+        ).orElse(false);
     }
 
     public void addUserToTicket(SlashCommandCreateEvent event, Ticket ticket, User user) {

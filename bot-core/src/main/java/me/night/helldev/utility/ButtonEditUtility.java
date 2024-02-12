@@ -5,6 +5,7 @@ import me.night.helldev.functionality.proposition.Proposition;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.entity.channel.TextChannel;
 import org.javacord.api.entity.emoji.CustomEmoji;
+import org.javacord.api.entity.emoji.Emoji;
 import org.javacord.api.entity.message.Message;
 import org.javacord.api.entity.message.MessageUpdater;
 import org.javacord.api.entity.message.component.Button;
@@ -30,13 +31,16 @@ public class ButtonEditUtility {
 
                 CustomEmoji tak = api.getCustomEmojiById("1196786062182338611").orElse(null);
                 CustomEmoji nie = api.getCustomEmojiById("1196786067081281627").orElse(null);
+                Emoji check = api.getCustomEmojiById("1206662704597700731").orElse(null);
 
-                Button yesButton = Button.success("pollyes-" + poll.getId(), ": " + poll.getVotesYes(), tak);
-                Button noButton = Button.danger("pollno-" + poll.getId(), ": " + poll.getVotesNo(), nie);
+
+                Button yesButton = Button.success("pollyes-"+ poll.getId(), ": " + poll.getVotesYes(), tak);
+                Button noButton = Button.danger("pollno-"+ poll.getId(), ": " + poll.getVotesNo(), nie);
+                Button checkButton = Button.primary("pollcheck-"+ poll.getId(), "Sprawdz kto zaglosowal", check);
 
                 MessageUpdater messageUpdater = new MessageUpdater(message)
                         .removeAllComponents()
-                        .addActionRow(yesButton, noButton);
+                        .addActionRow(yesButton, noButton, checkButton);
 
                 messageUpdater.applyChanges();
             }
