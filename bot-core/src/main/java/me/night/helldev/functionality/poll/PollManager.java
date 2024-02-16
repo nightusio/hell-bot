@@ -3,8 +3,6 @@ package me.night.helldev.functionality.poll;
 import eu.okaeri.injector.annotation.Inject;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Optional;
-
 @RequiredArgsConstructor(onConstructor_ = @Inject)
 public class PollManager {
 

@@ -5,6 +5,7 @@ import eu.okaeri.configs.serdes.DeserializationData;
 import eu.okaeri.configs.serdes.ObjectSerializer;
 import eu.okaeri.configs.serdes.SerializationData;
 import lombok.NonNull;
+import me.night.helldev.functionality.shared.VoteRecord;
 
 import java.util.HashSet;
 import java.util.List;
@@ -24,7 +25,7 @@ public class PollSerdes implements ObjectSerializer<Poll> {
         data.add("textChannel", object.getTextChannel());
         data.add("votesYes", object.getVotesYes());
         data.add("votesNo", object.getVotesNo());
-        data.add("votedUsers", object.getVotedUsers(), Long.class);
+        data.add("votedUsers", object.getVotedUsers());
 
     }
 
@@ -37,7 +38,7 @@ public class PollSerdes implements ObjectSerializer<Poll> {
         poll.setTextChannel(data.get("textChannel", long.class));
         poll.setVotesYes(data.get("votesYes", int.class));
         poll.setVotesNo(data.get("votesNo", int.class));
-        poll.setVotedUsers(data.getAsList("votedUsers", Long.class));
+        poll.setVotedUsers(data.get("votedUsers", VoteRecord.class));
         return poll;
     }
 

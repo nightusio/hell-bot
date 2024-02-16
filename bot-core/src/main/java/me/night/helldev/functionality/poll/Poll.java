@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.Getter;
 import me.night.helldev.functionality.crash.CrashManager;
 import me.night.helldev.functionality.shared.SharedType;
+import me.night.helldev.functionality.shared.VoteRecord;
 import org.javacord.api.entity.user.User;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class Poll {
     private long textChannel;
     private int votesYes;
     private int votesNo;
-    private List<Long> votedUsers;
+    private VoteRecord votedUsers;
 
     public Poll(int id) {
         this.id = id;
@@ -26,7 +27,7 @@ public class Poll {
         this.textChannel = 0L;
         this.votesNo = 0;
         this.votesYes = 0;
-        this.votedUsers = new ArrayList<>();
+        this.votedUsers = new VoteRecord();
     }
 
     private void updateVotes(boolean voteYes) {
@@ -38,12 +39,12 @@ public class Poll {
     }
 
     public SharedType addVote(User user, boolean voteYes) {
-        if (votedUsers.contains(user.getId())) {
+        if (votedUsers.alreadyVoted(user.getId())) {
             return SharedType.ALREADY_VOTED;
         }
         try {
             updateVotes(voteYes);
-            votedUsers.add(user.getId());
+            votedUsers.castVote(user.getId(), voteYes ? "Tak" : "Nie");
             return voteYes ? SharedType.VOTED_SUCCESSFULLY_YES : SharedType.VOTED_SUCCESSFULLY_NO;
         } catch (Exception exception) {
             CrashManager.sendCrashMessage(exception.getCause().getMessage());

@@ -38,6 +38,7 @@ import me.night.helldev.functionality.proposition.PropositionManager;
 import me.night.helldev.functionality.proposition.PropositionSerdes;
 import me.night.helldev.functionality.proposition.listener.PropositionButtonListener;
 import me.night.helldev.functionality.proposition.listener.PropositionMessageListener;
+import me.night.helldev.functionality.shared.VoteRecordSerdes;
 import me.night.helldev.functionality.ticket.TicketConfig;
 import me.night.helldev.functionality.ticket.TicketHandler;
 import me.night.helldev.functionality.ticket.TicketManager;
@@ -168,7 +169,9 @@ public class HellBot extends DreamJavacordPlatform implements DreamPersistence, 
             registry.register(new PollSerdes());
             registry.register(new PropositionSerdes());
             registry.register(new TicketCategorySerdes());
-        };    }
+            registry.register(new VoteRecordSerdes());
+        };
+    }
 
     @Override
     public @NonNull OkaeriSerdesPack getPersistenceSerdesPack() {

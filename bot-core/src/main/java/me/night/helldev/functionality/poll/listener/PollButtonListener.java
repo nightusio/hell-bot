@@ -8,10 +8,13 @@ import me.night.helldev.functionality.poll.PollManager;
 import me.night.helldev.functionality.shared.SharedType;
 import me.night.helldev.utility.ButtonEditUtility;
 import me.night.helldev.utility.MessageUtility;
-import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.user.User;
 import org.javacord.api.event.interaction.ButtonClickEvent;
 import org.javacord.api.listener.interaction.ButtonClickListener;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @RequiredArgsConstructor(onConstructor_ = @Inject)
 public class PollButtonListener implements ButtonClickListener {
@@ -28,8 +31,13 @@ public class PollButtonListener implements ButtonClickListener {
         if (poll == null) return;
 
         if (customId.contains("pollcheck-" + poll.getId())) {
+            List<String> list = new ArrayList<>();
+            for (Map.Entry<Long, String> votedUser : poll.getVotedUsers().getUserVotes().entrySet()) {
+                String entry = "<@" + votedUser.getKey() + "> : " + votedUser.getValue();
+                list.add(entry);
+            }
             MessageUtility.respondWithEphemeralMessage(event, "Osoby ktore zaglosowaly: " +
-                    poll.getVotedUsers());
+                    list);
             return;
         }
 
