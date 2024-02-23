@@ -11,6 +11,8 @@ import me.night.helldev.functionality.ticket.category.TicketCategory;
 import me.night.helldev.functionality.ticket.category.TicketCategoryManager;
 import me.night.helldev.functionality.ticket.exception.TicketError;
 import me.night.helldev.utility.MessageUtility;
+import org.javacord.api.entity.channel.Channel;
+import org.javacord.api.entity.channel.ServerChannel;
 import org.javacord.api.entity.channel.TextChannel;
 import org.javacord.api.entity.message.MessageFlag;
 import org.javacord.api.entity.message.component.SelectMenuOption;
@@ -18,6 +20,7 @@ import org.javacord.api.entity.server.Server;
 import org.javacord.api.entity.user.User;
 import org.javacord.api.event.interaction.SelectMenuChooseEvent;
 import org.javacord.api.listener.interaction.SelectMenuChooseListener;
+import org.w3c.dom.Text;
 
 import java.util.List;
 import java.util.Optional;
@@ -46,15 +49,15 @@ public class TicketMenuListener implements SelectMenuChooseListener {
             SelectMenuOption selectedOption = chosenOptions.get(0);
             String selectedStripped = selectedOption.getValue().replaceAll("ticket_", "");
 
-            ticketManager.getUserTicketByCategory(user.getId(), selectedOption.getValue()).ifPresent(userChannelId -> {
-                for (TicketCategory ticketCategory : ticketCategoryManager.getTicketCategories()) {
-                    if (selectedOption.getValue().equals(ticketCategory.getButtonIDMenu())) {
-                        handleTicketButton(event, server, userChannelId, user, selectedStripped);
-                        event.getInteraction().createImmediateResponder().respond();
-                        break;
-                    }
+            Optional<Long> userChannelId = Optional.of(ticketManager.getUserTicketByCategory(user.getId(), selectedOption.getValue()).orElse(0L));
+
+            for (TicketCategory ticketCategory : ticketCategoryManager.getTicketCategories()) {
+                if (selectedOption.getValue().equals(ticketCategory.getButtonIDMenu())) {
+                    handleTicketButton(event, server, userChannelId.get(), user, selectedStripped);
+                    event.getInteraction().createImmediateResponder().respond();
+                    break;
                 }
-            });
+            }
 
         }
     }

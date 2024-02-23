@@ -89,7 +89,7 @@ public class TicketCommand extends JavacordCommand {
                             "\n" +
                             "> Rozwiń liste poniżej i wybierz odpowiedni kanał do otwarcia.\n" +
                             "> Bezpodstawne tworzenie ticketow bedzie skutkowac banem!")
-                    .setFooter("© 2023 helldev.pl", interaction.getApi().getYourself().getAvatar())
+                    .setFooter("© 2024 helldev.pl", interaction.getApi().getYourself().getAvatar())
                     .setAuthor("helldev.pl - Stwórz ticket", "", interaction.getApi().getYourself().getAvatar())
                     .setImage("https://media.discordapp.net/attachments/1166458384426483764/1171555808266428458/helldev-ticket.png?ex=655d1b5f&is=654aa65f&hm=4f764fcc8851dee063780bd4d980b03b76d353515d9f77d21925f61299a6d67d&=")
                     .setColor(Color.RED)
