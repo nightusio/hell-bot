@@ -34,7 +34,7 @@ dependencies {
 
     // -- persistence data configure --
     implementation 'eu.okaeri:okaeri-configs-json-gson:5.0.0-beta.5'
-    implementation 'eu.okaeri:okaeri-configs-json-simple:5.0.0-beta.5'
+    implementation 'eu.okaeri:okaeri-configs-json-simple:5.0.2'
 
     // -- placeholders --
     implementation 'eu.okaeri:okaeri-placeholders-core:4.0.7'
