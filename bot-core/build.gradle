@@ -18,7 +18,7 @@ dependencies {
     implementation "cc.dreamcode.platform:core:1.9.6-pre.5"
     implementation "cc.dreamcode.platform:javacord:1.12.8"
     implementation "cc.dreamcode.platform:javacord-config:1.9.6-pre.5"
-    implementation "cc.dreamcode.platform:persistence:1.9.4"
+    implementation "cc.dreamcode.platform:persistence:1.12.9"
 
     // -- dream-utilities --
     implementation "cc.dreamcode:utilities:1.4.5"
