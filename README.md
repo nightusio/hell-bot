@@ -1,10 +1,7 @@
-Working with template:
+hell-bot:
 -----
-Clone this repo to your account, rename package name, then by pressing ``CTRL + SHIFT + R`` change all variables to your bot name. (Template --> PluginName).
+My old discord bot, works like total garbage, making my old repositories public.
 
-Finally, remove all **unnecessary** template functions.
-
-Read all comment above method/class/reference to find out what it means and how to use it -
 Build to jar by ``shadowJar`` gradle task.
 
 **Required:**
